@@ -24,8 +24,8 @@ const Topbar: React.FC = () => {
 
         {/* Download button à droite */}
         <a
-          href="/download/tonelab-setup-v2.1.4.exe"
-          download
+          href="https://github.com/DjoAHP/tone-lab-electron/releases/download/v2.1.4/tonelab-setup-v2.1.4.exe"
+          download="tonelab-setup-v2.1.4.exe"
           className="px-6 py-2 rounded-lg font-semibold text-white"
           style={{
             background: 'linear-gradient(135deg, #2B4F43, #3A6B56)',
