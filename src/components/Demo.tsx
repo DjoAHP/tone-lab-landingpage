@@ -17,11 +17,7 @@ const containerStyle: React.CSSProperties = {
 const videoWrapperStyle: React.CSSProperties = {
   position: 'relative' as const,
   width: '100%',
-  paddingTop: '56.25%',
-};
-
-const videoStyle: React.CSSProperties = {
-  backgroundColor: '#0D0F14',
+  paddingTop: '56.25%', // 16:9 aspect ratio
 };
 
 const Demo: React.FC = () => {
@@ -38,24 +34,18 @@ const Demo: React.FC = () => {
           Découvrez ToneLab en action avec cette vidéo de démonstration
         </p>
 
-        {/* Video container */}
+        {/* YouTube Video container */}
         <div className="max-w-[1000px] mx-auto rounded-2xl overflow-hidden" style={containerStyle}>
           <div style={videoWrapperStyle}>
-            <video
-              controls
-              autoPlay
-              muted
-              loop
-              aria-label="Démonstration de ToneLab"
-              preload="auto"
+            <iframe
               className="absolute top-0 left-0 w-full h-full"
-              poster="/assets/demo/poster.png"
-              style={videoStyle}
-            >
-              <source src="/assets/demo/tonelab-demo.mp4" type="video/mp4" />
-              <source src="/assets/demo/tonelab-demo.webm" type="video/webm" />
-              Votre navigateur ne supporte pas la lecture vidéo.
-            </video>
+              src="https://www.youtube.com/embed/wkIuMtFKtQE?autoplay=1&mute=1&loop=1&playlist=wkIuMtFKtQE&controls=1&modestbranding=1&rel=0"
+              title="Démonstration de ToneLab"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              style={{ backgroundColor: '#0D0F14' }}
+            />
           </div>
         </div>
       </div>
