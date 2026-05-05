@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-primary: #13151C;
+  --color-bg-secondary: #1A1D27;
+  --color-bg-tertiary: #252A38;
+  --color-accent-primary: #2B4F43;
+  --color-accent-light: #3A6B56;
+  --color-text-primary: #E0E0E0;
+  --color-text-secondary: #A0A0A0;
+  --color-text-muted: #666666;
+}
+
+:root {
+  --bg-primary: #13151C;
+  --bg-secondary: #1A1D27;
+  --bg-tertiary: #252A38;
+  --accent-primary: #2B4F43;
+  --accent-light: #3A6B56;
+  --accent-rgb: 43, 79, 67;
+  --text-primary: #E0E0E0;
+  --text-secondary: #A0A0A0;
+  --text-muted: #666666;
+  --border-subtle: rgba(43, 79, 67, 0.2);
+  --border-medium: rgba(43, 79, 67, 0.3);
+  --border-strong: rgba(43, 79, 67, 0.5);
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Geist Variable', system-ui, -apple-system, sans-serif;
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease-out both;
+}
+
+.animate-slideDown {
+  animation: slideDown 0.5s ease-out both;
+}
+
+/* Smooth transitions */
+* {
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
