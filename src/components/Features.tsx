@@ -32,6 +32,12 @@ const features: Feature[] = [
     title: 'Setlist',
     description: 'Permet de créer des setlists pour groupe de musique.',
   },
+  {
+    id: 'chrono',
+    icon: <img src="/assets/icons/chrono-tool.svg" alt="Chrono" className="w-7 h-7 brightness-0 invert" />,
+    title: 'Chrono',
+    description: 'Chronomètre précis pour chronométrer vos morceaux de musique.',
+  },
 ];
 
 const sectionStyle: React.CSSProperties = {
@@ -77,7 +83,7 @@ const Features: React.FC = () => {
         </p>
 
         {/* Features grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {features.map((feature) => (
             <div
               key={feature.id}
