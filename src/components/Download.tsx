@@ -71,11 +71,11 @@ const Download: React.FC = () => {
             href="https://github.com/DjoAHP/tone-lab-electron/releases/download/v2.5.5/ToneLab-2.5.5.Setup.exe"
             download="ToneLab-2.5.5.Setup.exe"
             aria-label="Télécharger ToneLab v2.5.5 pour Windows (134 MB, compatible 10/11 64-bit)"
-            className="inline-block px-[52px] py-5 rounded-xl font-semibold text-xl text-white mb-5 shadow-xl"
+            className="inline-block px-6 py-2 rounded-lg font-semibold text-sm text-white mb-5"
             style={primaryButtonStyle}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = 'scale(1.05)';
-              e.currentTarget.style.boxShadow = '0 15px 40px rgba(29, 113, 149, 0.6)';
+              e.currentTarget.style.boxShadow = '0 2px 10px rgba(29, 113, 149, 0.2)';
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = 'scale(1)';

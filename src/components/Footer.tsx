@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
     <footer className="relative overflow-hidden"
             style={{
               backgroundColor: 'var(--bg-primary)',
-              padding: '40px 40px 20px',
+              padding: '20px 40px 15px',
               borderTop: '1px solid var(--border-medium)',
             }}>
       {/* Shader overlay (ready for your custom gradient) */}
@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Links - Rapprochés des bords */}
-          <div className="flex gap-16 flex-wrap">
+          <div className="flex gap-8 flex-wrap">
             {/* Links column */}
             <div>
               <h4 className="text-text-primary text-sm font-semibold mb-4 uppercase tracking-wider">
@@ -62,14 +62,14 @@ const Footer: React.FC = () => {
               </ul>
             </div>
 
-            {/* Community column */}
-            <div>
-              <h4 className="text-text-primary text-sm font-semibold mb-4 uppercase tracking-wider">
+          {/* Community column */}
+          <div>
+            <h4 className="text-text-primary text-sm font-semibold mb-4 uppercase tracking-wider">
                 Communauté
               </h4>
               <ul className="space-y-3">
                 <li>
-                  <a href="https://github.com/ton-user/tone-lab-electron"
+                  <a href="https://github.com/DjoAHP/tone-lab-electron"
                      target="_blank"
                      rel="noopener noreferrer"
                      className="text-text-secondary text-sm hover:text-accent-primary transition-colors inline-flex items-center gap-2">
@@ -82,12 +82,12 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-[rgba(255,255,255,0.05)] pt-5 flex justify-between items-center flex-wrap gap-4">
+        <div className="mt-4 pt-4 border-t border-[var(--border-subtle)] flex justify-between items-center flex-wrap gap-4">
           <div className="text-text-muted text-sm">
             © {new Date().getFullYear()} ToneLab. Tous droits réservés.
           </div>
           <div className="flex gap-4">
-            <a href="https://github.com/ton-user/tone-lab-electron"
+            <a href="https://github.com/DjoAHP/tone-lab-electron"
                target="_blank"
                rel="noopener noreferrer"
                className="w-9 h-9 rounded-lg flex items-center justify-center text-text-secondary hover:text-accent-primary hover:bg-[rgba(43,79,67,0.2)] transition-all"

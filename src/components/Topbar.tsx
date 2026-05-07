@@ -26,19 +26,19 @@ const Topbar: React.FC = () => {
         <a
           href="https://github.com/DjoAHP/tone-lab-electron/releases/download/v2.5.5/ToneLab-2.5.5.Setup.exe"
           download="ToneLab-2.5.5.Setup.exe"
-          className="px-6 py-2 rounded-lg font-semibold text-white"
+          className="px-4 py-1.5 rounded-md font-semibold text-sm text-white"
           style={{
             background: 'linear-gradient(135deg, #1D7195, #2898C8)',
-            boxShadow: '0 4px 15px rgba(29, 113, 149, 0.3)',
+            boxShadow: '0 2px 10px rgba(29, 113, 149, 0.2)',
             transition: 'all 200ms ease-out',
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.transform = 'scale(1.05)';
-            e.currentTarget.style.boxShadow = '0 8px 25px rgba(29, 113, 149, 0.5)';
+            e.currentTarget.style.boxShadow = '0 4px 15px rgba(29, 113, 149, 0.4)';
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.transform = 'scale(1)';
-            e.currentTarget.style.boxShadow = '0 4px 15px rgba(29, 113, 149, 0.3)';
+            e.currentTarget.style.boxShadow = '0 2px 10px rgba(29, 113, 149, 0.2)';
           }}
         >
           Télécharger

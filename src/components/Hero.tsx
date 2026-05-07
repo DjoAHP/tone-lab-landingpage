@@ -47,19 +47,19 @@ const Hero: React.FC = () => {
           <a
             href="https://github.com/DjoAHP/tone-lab-electron/releases/download/v2.5.5/ToneLab-2.5.5.Setup.exe"
             download="ToneLab-2.5.5.Setup.exe"
-            className="relative px-10 py-4 rounded-xl font-semibold text-lg text-white inline-flex items-center gap-3 overflow-hidden"
+            className="relative px-6 py-2 rounded-lg font-semibold text-sm text-white inline-flex items-center gap-2 overflow-hidden"
             style={{
               background: 'linear-gradient(135deg, #1D7195, #2898C8)',
-              boxShadow: '0 8px 25px rgba(29, 113, 149, 0.4)',
+              boxShadow: '0 4px 15px rgba(29, 113, 149, 0.3)',
               transition: 'all 200ms ease-out',
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = 'scale(1.05)';
-              e.currentTarget.style.boxShadow = '0 15px 40px rgba(29, 113, 149, 0.6)';
+              e.currentTarget.style.boxShadow = '0 8px 25px rgba(29, 113, 149, 0.5)';
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = 'scale(1)';
-              e.currentTarget.style.boxShadow = '0 8px 25px rgba(29, 113, 149, 0.4)';
+              e.currentTarget.style.boxShadow = '0 4px 15px rgba(29, 113, 149, 0.3)';
             }}
           >
             {/* Shimmer effect */}
@@ -69,23 +69,23 @@ const Hero: React.FC = () => {
 
           {/* PWA button */}
           <button
-            className="relative px-10 py-4 rounded-xl font-semibold text-lg inline-flex items-center gap-3 overflow-hidden"
+            className="relative px-6 py-2 rounded-lg font-semibold text-sm inline-flex items-center gap-2 overflow-hidden"
             style={{
               backgroundColor: 'rgba(255, 255, 255, 0.05)',
-              color: '#1D7195',
-              border: '2px solid rgba(29, 113, 149, 0.5)',
+              color: 'var(--accent-primary)',
+              border: '1px solid var(--border-medium)',
               backdropFilter: 'blur(10px)',
               transition: 'all 200ms ease-out',
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = 'scale(1.05)';
-              e.currentTarget.style.boxShadow = '0 15px 40px rgba(29, 113, 149, 0.3)';
-              e.currentTarget.style.borderColor = 'rgba(29, 113, 149, 0.8)';
+              e.currentTarget.style.boxShadow = '0 8px 25px rgba(29, 113, 149, 0.4)';
+              e.currentTarget.style.borderColor = 'var(--border-strong)';
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = 'scale(1)';
               e.currentTarget.style.boxShadow = 'none';
-              e.currentTarget.style.borderColor = 'rgba(29, 113, 149, 0.5)';
+              e.currentTarget.style.borderColor = 'var(--border-medium)';
             }}
           >
             {/* Shimmer effect */}

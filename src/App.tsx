@@ -12,10 +12,14 @@ const App: React.FC = () => {
       <Topbar />
       <main>
         <Hero />
+        <div className="max-w-[1500px] mx-auto px-4"><hr className="border-t border-[var(--border-subtle)]" /></div>
         <Features />
+        <div className="max-w-[1500px] mx-auto px-4"><hr className="border-t border-[var(--border-subtle)]" /></div>
         <Demo />
+        <div className="max-w-[1500px] mx-auto px-4"><hr className="border-t border-[var(--border-subtle)]" /></div>
         <Download />
       </main>
+      <div className="max-w-[1500px] mx-auto px-4"><hr className="border-t border-[var(--border-subtle)]" /></div>
       <Footer />
     </div>
   );
