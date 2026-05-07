@@ -41,8 +41,8 @@ const sectionStyle: React.CSSProperties = {
 
 const overlayStyle: React.CSSProperties = {
   background: `
-    radial-gradient(circle at 10% 90%, rgba(43, 79, 67, 0.1) 0%, transparent 40%),
-    radial-gradient(circle at 90% 10%, rgba(43, 79, 67, 0.08) 0%, transparent 40%)
+    radial-gradient(circle at 10% 90%, rgba(42, 61, 92, 0.1) 0%, transparent 40%),
+    radial-gradient(circle at 90% 10%, rgba(42, 61, 92, 0.08) 0%, transparent 40%)
   `,
 };
 
@@ -53,12 +53,12 @@ const gridStyle: React.CSSProperties = {
 
 const cardStyle: React.CSSProperties = {
   background: 'linear-gradient(135deg, #13151C, #1A1D27)',
-  borderColor: 'rgba(43, 79, 67, 0.2)',
+  borderColor: 'rgba(42, 61, 92, 0.2)',
   transition: 'all 200ms ease-out',
 };
 
 const iconContainerStyle: React.CSSProperties = {
-  background: 'linear-gradient(135deg, #2B4F43, #3A6B56)',
+  background: 'linear-gradient(135deg, #2A3D5C, #3A5478)',
   transition: 'transform 200ms ease-out',
 };
 
@@ -88,13 +88,13 @@ const Features: React.FC = () => {
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateY(-8px)';
-                e.currentTarget.style.boxShadow = '0 15px 40px rgba(43,79,67,0.3)';
-                e.currentTarget.style.borderColor = 'rgba(43,79,67,0.6)';
+                e.currentTarget.style.boxShadow = '0 15px 40px rgba(42,61,92,0.3)';
+                e.currentTarget.style.borderColor = 'rgba(42,61,92,0.6)';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateY(0)';
                 e.currentTarget.style.boxShadow = 'none';
-                e.currentTarget.style.borderColor = 'rgba(43,79,67,0.2)';
+                e.currentTarget.style.borderColor = 'rgba(42,61,92,0.2)';
               }}
             >
               <div
@@ -113,7 +113,7 @@ const Features: React.FC = () => {
                 className="text-xl font-semibold text-text-primary mb-3"
                 style={{ transition: 'color 200ms ease-out' }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.color = '#3A6B56';
+                  e.currentTarget.style.color = '#3A5478';
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.color = '';

@@ -6,7 +6,7 @@ const Topbar: React.FC = () => {
          style={{
            backgroundColor: 'rgba(26, 29, 39, 0.8)',
            backdropFilter: 'blur(10px)',
-           borderBottom: '1px solid rgba(43, 79, 67, 0.3)',
+           borderBottom: '1px solid rgba(42, 61, 92, 0.3)',
          }}>
       <div className="max-w-[1500px] mx-auto px-10 py-4 flex items-center justify-between">
         {/* Logo + Nom + Version à gauche */}
@@ -18,27 +18,27 @@ const Topbar: React.FC = () => {
           />
           <div className="flex flex-col">
             <span className="text-text-primary text-lg font-bold leading-none">ToneLab</span>
-            <span className="text-text-muted text-xs">v2.1.4</span>
+            <span className="text-text-muted text-xs">v2.3.4</span>
           </div>
         </div>
 
         {/* Download button à droite */}
         <a
-          href="https://github.com/DjoAHP/tone-lab-electron/releases/download/v2.1.4/ToneLab-v2.1.4.exe"
-          download="tonelab-setup-v2.1.4.exe"
+          href="https://github.com/DjoAHP/tone-lab-electron/releases/download/v2.3.4/ToneLab-2.3.4.Setup.exe"
+          download="ToneLab-2.3.4.Setup.exe"
           className="px-6 py-2 rounded-lg font-semibold text-white"
           style={{
-            background: 'linear-gradient(135deg, #2B4F43, #3A6B56)',
-            boxShadow: '0 4px 15px rgba(43, 79, 67, 0.3)',
+            background: 'linear-gradient(135deg, #2A3D5C, #3A5478)',
+            boxShadow: '0 4px 15px rgba(42, 61, 92, 0.3)',
             transition: 'all 200ms ease-out',
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.transform = 'scale(1.05)';
-            e.currentTarget.style.boxShadow = '0 8px 25px rgba(43, 79, 67, 0.5)';
+            e.currentTarget.style.boxShadow = '0 8px 25px rgba(42, 61, 92, 0.5)';
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.transform = 'scale(1)';
-            e.currentTarget.style.boxShadow = '0 4px 15px rgba(43, 79, 67, 0.3)';
+            e.currentTarget.style.boxShadow = '0 4px 15px rgba(42, 61, 92, 0.3)';
           }}
         >
           Télécharger

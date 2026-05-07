@@ -7,12 +7,12 @@ const Footer: React.FC = () => {
             style={{
               backgroundColor: '#0D0F14',
               padding: '40px 40px 20px',
-              borderTop: '1px solid rgba(43, 79, 67, 0.3)',
+              borderTop: '1px solid rgba(42, 61, 92, 0.3)',
             }}>
       {/* Radial gradient overlay */}
       <div className="absolute inset-0 pointer-events-none"
            style={{
-             background: `radial-gradient(circle at 50% 100%, rgba(43, 79, 67, 0.08) 0%, transparent 50%)`,
+             background: `radial-gradient(circle at 50% 100%, rgba(42, 61, 92, 0.08) 0%, transparent 50%)`,
            }} />
 
       <div className="relative z-10 max-w-[1500px] mx-auto">
@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
               />
               <div className="flex flex-col">
                 <span className="text-text-primary text-lg font-bold leading-none">ToneLab</span>
-                <span className="text-text-muted text-xs">v2.1.4</span>
+                <span className="text-text-muted text-xs">v2.3.4</span>
               </div>
             </div>
           </div>
@@ -42,7 +42,7 @@ const Footer: React.FC = () => {
               </h4>
               <ul className="space-y-3">
                 <li>
-                  <a href="https://github.com/DjoAHP/tone-lab-electron/releases/download/v2.1.4/ToneLab-v2.1.4.exe" download="ToneLab-v2.1.4.exe"
+                  <a href="https://github.com/DjoAHP/tone-lab-electron/releases/download/v2.3.4/ToneLab-2.3.4.Setup.exe" download="ToneLab-2.3.4.Setup.exe"
                      className="group relative text-text-secondary text-sm hover:text-accent-primary transition-colors duration-300 inline-flex items-center gap-2">
                     Télécharger
                     <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-accent-primary transition-all duration-500 ease-out group-hover:w-full"></span>

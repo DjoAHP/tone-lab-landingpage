@@ -13,8 +13,8 @@ const Hero: React.FC = () => {
       <div className="absolute inset-0 pointer-events-none"
            style={{
              background: `
-               radial-gradient(circle at 20% 50%, rgba(43, 79, 67, 0.15) 0%, transparent 50%),
-               radial-gradient(circle at 80% 50%, rgba(43, 79, 67, 0.15) 0%, transparent 50%)
+               radial-gradient(circle at 20% 50%, rgba(42, 61, 92, 0.15) 0%, transparent 50%),
+               radial-gradient(circle at 80% 50%, rgba(42, 61, 92, 0.15) 0%, transparent 50%)
              `,
            }} />
 
@@ -33,7 +33,7 @@ const Hero: React.FC = () => {
         {/* Title with gradient text */}
         <h1 className="text-7xl font-extrabold mb-5 animate-fadeInUp"
             style={{
-              background: 'linear-gradient(135deg, #FFFFFF 0%, #2B4F43 100%)',
+              background: 'linear-gradient(135deg, #FFFFFF 0%, #2A3D5C 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text',
@@ -52,21 +52,21 @@ const Hero: React.FC = () => {
              style={{ animationDelay: '0.4s' }}>
           {/* Primary download button */}
           <a
-            href="https://github.com/DjoAHP/tone-lab-electron/releases/download/v2.1.4/ToneLab-v2.1.4.exe"
-            download="ToneLab-v2.1.4.exe"
+            href="https://github.com/DjoAHP/tone-lab-electron/releases/download/v2.3.4/ToneLab-2.3.4.Setup.exe"
+            download="ToneLab-2.3.4.Setup.exe"
             className="relative px-10 py-4 rounded-xl font-semibold text-lg text-white inline-flex items-center gap-3 overflow-hidden"
             style={{
-              background: 'linear-gradient(135deg, #2B4F43, #3A6B56)',
-              boxShadow: '0 8px 25px rgba(43, 79, 67, 0.4)',
+              background: 'linear-gradient(135deg, #2A3D5C, #3A5478)',
+              boxShadow: '0 8px 25px rgba(42, 61, 92, 0.4)',
               transition: 'all 200ms ease-out',
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = 'scale(1.05)';
-              e.currentTarget.style.boxShadow = '0 15px 40px rgba(43, 79, 67, 0.6)';
+              e.currentTarget.style.boxShadow = '0 15px 40px rgba(42, 61, 92, 0.6)';
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = 'scale(1)';
-              e.currentTarget.style.boxShadow = '0 8px 25px rgba(43, 79, 67, 0.4)';
+              e.currentTarget.style.boxShadow = '0 8px 25px rgba(42, 61, 92, 0.4)';
             }}
           >
             {/* Shimmer effect */}
@@ -79,20 +79,20 @@ const Hero: React.FC = () => {
             className="relative px-10 py-4 rounded-xl font-semibold text-lg inline-flex items-center gap-3 overflow-hidden"
             style={{
               backgroundColor: 'rgba(255, 255, 255, 0.05)',
-              color: '#2B4F43',
-              border: '2px solid rgba(43, 79, 67, 0.5)',
+              color: '#2A3D5C',
+              border: '2px solid rgba(42, 61, 92, 0.5)',
               backdropFilter: 'blur(10px)',
               transition: 'all 200ms ease-out',
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = 'scale(1.05)';
-              e.currentTarget.style.boxShadow = '0 15px 40px rgba(43, 79, 67, 0.3)';
-              e.currentTarget.style.borderColor = 'rgba(43, 79, 67, 0.8)';
+              e.currentTarget.style.boxShadow = '0 15px 40px rgba(42, 61, 92, 0.3)';
+              e.currentTarget.style.borderColor = 'rgba(42, 61, 92, 0.8)';
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = 'scale(1)';
               e.currentTarget.style.boxShadow = 'none';
-              e.currentTarget.style.borderColor = 'rgba(43, 79, 67, 0.5)';
+              e.currentTarget.style.borderColor = 'rgba(42, 61, 92, 0.5)';
             }}
           >
             {/* Shimmer effect */}

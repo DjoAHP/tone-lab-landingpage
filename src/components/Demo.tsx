@@ -6,12 +6,12 @@ const sectionStyle: React.CSSProperties = {
 };
 
 const overlayStyle: React.CSSProperties = {
-  background: `radial-gradient(circle at 50% 50%, rgba(43, 79, 67, 0.08) 0%, transparent 60%)`,
+  background: `radial-gradient(circle at 50% 50%, rgba(42, 61, 92, 0.08) 0%, transparent 60%)`,
 };
 
 const containerStyle: React.CSSProperties = {
-  boxShadow: '0 30px 80px rgba(0, 0, 0, 0.6), 0 0 100px rgba(43, 79, 67, 0.15)',
-  border: '1px solid rgba(43, 79, 67, 0.3)',
+  boxShadow: '0 30px 80px rgba(0, 0, 0, 0.6), 0 0 100px rgba(42, 61, 92, 0.15)',
+  border: '1px solid rgba(42, 61, 92, 0.3)',
 };
 
 const videoWrapperStyle: React.CSSProperties = {
