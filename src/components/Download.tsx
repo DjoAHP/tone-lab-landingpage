@@ -8,26 +8,26 @@ const sectionStyle: React.CSSProperties = {
 
 const cardStyle: React.CSSProperties = {
   background: 'linear-gradient(135deg, #1A1D27, #252A38)',
-  border: '1px solid rgba(132, 118, 46, 0.3)',
-  boxShadow: '0 20px 60px rgba(0, 0, 0, 0.4), 0 0 80px rgba(132, 118, 46, 0.1)',
+  border: '1px solid rgba(29, 113, 149, 0.3)',
+  boxShadow: '0 20px 60px rgba(0, 0, 0, 0.4), 0 0 80px rgba(29, 113, 149, 0.1)',
   transition: 'all 200ms ease-out',
 };
 
 const iconContainerStyle: React.CSSProperties = {
-  background: 'linear-gradient(135deg, #84762E, #B19E3E)',
-  boxShadow: '0 10px 30px rgba(132, 118, 46, 0.4)',
+  background: 'linear-gradient(135deg, #1D7195, #2898C8)',
+  boxShadow: '0 10px 30px rgba(29, 113, 149, 0.4)',
 };
 
 const primaryButtonStyle: React.CSSProperties = {
-  background: 'linear-gradient(135deg, #84762E, #B19E3E)',
-  boxShadow: '0 10px 30px rgba(132, 118, 46, 0.4)',
+  background: 'linear-gradient(135deg, #1D7195, #2898C8)',
+  boxShadow: '0 10px 30px rgba(29, 113, 149, 0.4)',
   transition: 'all 200ms ease-out',
 };
 
 const pwaButtonStyle: React.CSSProperties = {
   backgroundColor: 'rgba(255, 255, 255, 0.1)',
   color: '#FFFFFF',
-  border: '2px solid rgba(132, 118, 46, 0.5)',
+  border: '2px solid rgba(29, 113, 149, 0.5)',
   backdropFilter: 'blur(10px)',
   transition: 'all 200ms ease-out',
 };
@@ -39,8 +39,8 @@ const Download: React.FC = () => {
       <div className="absolute inset-0 pointer-events-none"
            style={{
              background: `
-               radial-gradient(circle at 30% 70%, rgba(132, 118, 46, 0.1) 0%, transparent 50%),
-               radial-gradient(circle at 70% 30%, rgba(132, 118, 46, 0.08) 0%, transparent 50%)
+               radial-gradient(circle at 30% 70%, rgba(29, 113, 149, 0.1) 0%, transparent 50%),
+               radial-gradient(circle at 70% 30%, rgba(29, 113, 149, 0.08) 0%, transparent 50%)
              `,
            }} />
 
@@ -57,13 +57,13 @@ const Download: React.FC = () => {
              style={cardStyle}
              onMouseEnter={(e) => {
                e.currentTarget.style.transform = 'translateY(-8px)';
-               e.currentTarget.style.boxShadow = '0 30px 80px rgba(0, 0, 0, 0.5), 0 0 100px rgba(132, 118, 46, 0.15)';
-               e.currentTarget.style.borderColor = 'rgba(132, 118, 46, 0.6)';
+               e.currentTarget.style.boxShadow = '0 30px 80px rgba(0, 0, 0, 0.5), 0 0 100px rgba(29, 113, 149, 0.15)';
+               e.currentTarget.style.borderColor = 'rgba(29, 113, 149, 0.6)';
              }}
              onMouseLeave={(e) => {
                e.currentTarget.style.transform = 'translateY(0)';
-               e.currentTarget.style.boxShadow = '0 20px 60px rgba(0, 0, 0, 0.4), 0 0 80px rgba(132, 118, 46, 0.1)';
-               e.currentTarget.style.borderColor = 'rgba(132, 118, 46, 0.3)';
+               e.currentTarget.style.boxShadow = '0 20px 60px rgba(0, 0, 0, 0.4), 0 0 80px rgba(29, 113, 149, 0.1)';
+               e.currentTarget.style.borderColor = 'rgba(29, 113, 149, 0.3)';
              }}
         >
           {/* Download icon */}
@@ -74,18 +74,18 @@ const Download: React.FC = () => {
 
           {/* Primary download button */}
           <a
-            href="https://github.com/DjoAHP/tone-lab-electron/releases/download/v2.4.4/ToneLab-2.4.4.Setup.exe"
-            download="ToneLab-2.4.4.Setup.exe"
-            aria-label="Télécharger ToneLab v2.4.4 pour Windows (133 MB, compatible 10/11 64-bit)"
+            href="https://github.com/DjoAHP/tone-lab-electron/releases/download/v2.5.4/ToneLab-2.5.4.Setup.exe"
+            download="ToneLab-2.5.4.Setup.exe"
+            aria-label="Télécharger ToneLab v2.5.4 pour Windows (134 MB, compatible 10/11 64-bit)"
             className="inline-block px-[52px] py-5 rounded-xl font-semibold text-xl text-white mb-5 shadow-xl"
             style={primaryButtonStyle}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = 'scale(1.05)';
-              e.currentTarget.style.boxShadow = '0 15px 40px rgba(132, 118, 46, 0.6)';
+              e.currentTarget.style.boxShadow = '0 15px 40px rgba(29, 113, 149, 0.6)';
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = 'scale(1)';
-              e.currentTarget.style.boxShadow = '0 10px 30px rgba(132, 118, 46, 0.4)';
+              e.currentTarget.style.boxShadow = '0 10px 30px rgba(29, 113, 149, 0.4)';
             }}
           >
             <span className="inline-flex items-center gap-3">
@@ -95,7 +95,7 @@ const Download: React.FC = () => {
 
           {/* Version info */}
           <div className="text-text-secondary text-sm mb-8 leading-relaxed">
-            <strong className="text-text-primary">Version 2.4.4</strong> • 133 MB<br />
+            <strong className="text-text-primary">Version 2.4.4</strong> • 134 MB<br />
             Compatible Windows 10/11 (64-bit)
           </div>
 
@@ -107,12 +107,12 @@ const Download: React.FC = () => {
             style={pwaButtonStyle}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = 'scale(1.05)';
-              e.currentTarget.style.borderColor = 'rgba(132, 118, 46, 0.8)';
-              e.currentTarget.style.boxShadow = '0 10px 30px rgba(132, 118, 46, 0.3)';
+              e.currentTarget.style.borderColor = 'rgba(29, 113, 149, 0.8)';
+              e.currentTarget.style.boxShadow = '0 10px 30px rgba(29, 113, 149, 0.3)';
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = 'scale(1)';
-              e.currentTarget.style.borderColor = 'rgba(132, 118, 46, 0.5)';
+              e.currentTarget.style.borderColor = 'rgba(29, 113, 149, 0.5)';
               e.currentTarget.style.boxShadow = 'none';
             }}
           >

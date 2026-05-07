@@ -41,8 +41,8 @@ const sectionStyle: React.CSSProperties = {
 
 const overlayStyle: React.CSSProperties = {
   background: `
-    radial-gradient(circle at 10% 90%, rgba(132, 118, 46, 0.1) 0%, transparent 40%),
-    radial-gradient(circle at 90% 10%, rgba(132, 118, 46, 0.08) 0%, transparent 40%)
+    radial-gradient(circle at 10% 90%, rgba(29, 113, 149), 0.1) 0%, transparent 40%),
+    radial-gradient(circle at 90% 10%, rgba(29, 113, 149), 0.08) 0%, transparent 40%)
   `,
 };
 
@@ -53,12 +53,12 @@ const gridStyle: React.CSSProperties = {
 
 const cardStyle: React.CSSProperties = {
   background: 'linear-gradient(135deg, #13151C, #1A1D27)',
-  borderColor: 'rgba(132, 118, 46, 0.2)',
+  borderColor: 'rgba(29, 113, 149), 0.2)',
   transition: 'all 200ms ease-out',
 };
 
 const iconContainerStyle: React.CSSProperties = {
-  background: 'linear-gradient(135deg, #84762E, #B19E3E)',
+  background: 'linear-gradient(135deg, #1D7195, #2898C8)',
   transition: 'transform 200ms ease-out',
 };
 
@@ -113,7 +113,7 @@ const Features: React.FC = () => {
                 className="text-xl font-semibold text-text-primary mb-3"
                 style={{ transition: 'color 200ms ease-out' }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.color = '#B19E3E';
+                  e.currentTarget.style.color = '#2898C8';
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.color = '';
