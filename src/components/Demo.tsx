@@ -1,17 +1,13 @@
 import React from 'react';
 
 const sectionStyle: React.CSSProperties = {
-  backgroundColor: '#13151C',
+  backgroundColor: 'var(--bg-primary)',
   padding: '100px 40px',
 };
 
-const overlayStyle: React.CSSProperties = {
-  background: `radial-gradient(circle at 50% 50%, rgba(29, 113, 149), 0.08) 0%, transparent 60%)`,
-};
-
 const containerStyle: React.CSSProperties = {
-  boxShadow: '0 30px 80px rgba(0, 0, 0, 0.6), 0 0 100px rgba(29, 113, 149), 0.15)',
-  border: '1px solid rgba(29, 113, 149), 0.3)',
+  boxShadow: '0 30px 80px rgba(0, 0, 0, 0.6), 0 0 100px rgba(29, 113, 149, 0.15)',
+  border: '1px solid var(--border-medium)',
 };
 
 const videoWrapperStyle: React.CSSProperties = {
@@ -23,8 +19,8 @@ const videoWrapperStyle: React.CSSProperties = {
 const Demo: React.FC = () => {
   return (
     <section className="relative overflow-hidden" style={sectionStyle}>
-      {/* Radial gradient overlay */}
-      <div className="absolute inset-0 pointer-events-none" style={overlayStyle} />
+      {/* Shader overlay (ready for your custom gradient) */}
+      <div className="absolute inset-0 pointer-events-none" style={{ background: 'transparent' }} />
 
       <div className="relative z-10 max-w-[1200px] mx-auto">
         <h2 className="text-4xl font-bold text-text-primary text-center mb-5">
@@ -39,12 +35,12 @@ const Demo: React.FC = () => {
           <div style={videoWrapperStyle}>
             <iframe
               className="absolute top-0 left-0 w-full h-full"
-              src="https://www.youtube.com/embed/wkIuMtFKtQE?autoplay=1&mute=1&loop=1&playlist=wkIuMtFKtQE&controls=1&modestbranding=1&rel=0"
+              src="https://www.youtube.com/embed/wkIuMtFKtQE?autoplay=1&muted=1&loop=1&playlist=wkIuMtFKtQE&controls=1&modestbranding=1&rel=0"
               title="Démonstration de ToneLab"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
-              style={{ backgroundColor: '#0D0F14' }}
+              style={{ backgroundColor: 'var(--bg-primary)' }}
             />
           </div>
         </div>
