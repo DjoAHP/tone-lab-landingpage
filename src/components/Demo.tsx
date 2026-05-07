@@ -35,7 +35,7 @@ const Demo: React.FC = () => {
           <div style={videoWrapperStyle}>
             <iframe
               className="absolute top-0 left-0 w-full h-full"
-              src="https://www.youtube.com/embed/wkIuMtFKtQE?enablejsapi=1&muted=1&loop=1&playlist=wkIuMtFKtQE&controls=1&modestbranding=1&rel=0"
+              src="https://www.youtube.com/embed/wkIuMtFKtQE?rel=0&modestbranding=1"
               title="Démonstration de ToneLab"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
