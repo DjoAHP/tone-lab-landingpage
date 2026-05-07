@@ -4,8 +4,8 @@
   --color-bg-primary: #13151C;
   --color-bg-secondary: #1A1D27;
   --color-bg-tertiary: #252A38;
-  --color-accent-primary: #2A3D5C;
-  --color-accent-light: #3A5478;
+  --color-accent-primary: #84762E;
+  --color-accent-light: #B19E3E;
   --color-text-primary: #E0E0E0;
   --color-text-secondary: #A0A0A0;
   --color-text-muted: #666666;
@@ -15,15 +15,15 @@
   --bg-primary: #13151C;
   --bg-secondary: #1A1D27;
   --bg-tertiary: #252A38;
-  --accent-primary: #2A3D5C;
-  --accent-light: #3A5478;
-  --accent-rgb: 42, 61, 92;
+  --accent-primary: #84762E;
+  --accent-light: #B19E3E;
+  --accent-rgb: 132, 118, 46;
   --text-primary: #E0E0E0;
   --text-secondary: #A0A0A0;
   --text-muted: #666666;
-  --border-subtle: rgba(42, 61, 92, 0.2);
-  --border-medium: rgba(42, 61, 92, 0.3);
-  --border-strong: rgba(42, 61, 92, 0.5);
+  --border-subtle: rgba(132, 118, 46, 0.2);
+  --border-medium: rgba(132, 118, 46, 0.3);
+  --border-strong: rgba(132, 118, 46, 0.5);
 }
 
 body {
