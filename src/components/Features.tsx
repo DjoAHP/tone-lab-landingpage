@@ -41,14 +41,14 @@ const features: Feature[] = [
 ];
 
 const sectionStyle: React.CSSProperties = {
-  backgroundColor: '#1A1D27',
+  backgroundColor: 'var(--bg-secondary)',
   padding: '100px 40px',
 };
 
 const overlayStyle: React.CSSProperties = {
   background: `
-    radial-gradient(circle at 10% 90%, rgba(29, 113, 149), 0.1) 0%, transparent 40%),
-    radial-gradient(circle at 90% 10%, rgba(29, 113, 149), 0.08) 0%, transparent 40%)
+    radial-gradient(circle at 10% 90%, var(--border-subtle) 0%, transparent 40%),
+    radial-gradient(circle at 90% 10%, var(--border-medium) 0%, transparent 40%)
   `,
 };
 
@@ -58,13 +58,13 @@ const gridStyle: React.CSSProperties = {
 };
 
 const cardStyle: React.CSSProperties = {
-  background: 'linear-gradient(135deg, #13151C, #1A1D27)',
-  borderColor: 'rgba(29, 113, 149), 0.2)',
+  background: 'linear-gradient(135deg, var(--bg-primary), var(--bg-secondary))',
+  borderColor: 'var(--border-subtle)',
   transition: 'all 200ms ease-out',
 };
 
 const iconContainerStyle: React.CSSProperties = {
-  background: 'linear-gradient(135deg, #1D7195, #2898C8)',
+  background: 'linear-gradient(135deg, var(--accent-primary), var(--accent-light))',
   transition: 'transform 200ms ease-out',
 };
 
@@ -94,13 +94,13 @@ const Features: React.FC = () => {
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateY(-8px)';
-                e.currentTarget.style.boxShadow = '0 15px 40px rgba(132,118,46,0.3)';
-                e.currentTarget.style.borderColor = 'rgba(132,118,46,0.6)';
+                e.currentTarget.style.boxShadow = '0 15px 40px var(--border-medium)';
+                e.currentTarget.style.borderColor = 'var(--border-strong)';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateY(0)';
                 e.currentTarget.style.boxShadow = 'none';
-                e.currentTarget.style.borderColor = 'rgba(132,118,46,0.2)';
+                e.currentTarget.style.borderColor = 'var(--border-subtle)';
               }}
             >
               <div
@@ -119,7 +119,7 @@ const Features: React.FC = () => {
                 className="text-xl font-semibold text-text-primary mb-3"
                 style={{ transition: 'color 200ms ease-out' }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.color = '#2898C8';
+                  e.currentTarget.style.color = 'var(--accent-light)';
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.color = '';

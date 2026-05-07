@@ -18,14 +18,14 @@ const Topbar: React.FC = () => {
           />
           <div className="flex flex-col">
             <span className="text-text-primary text-lg font-bold leading-none">ToneLab</span>
-            <span className="text-text-muted text-xs">v2.5.4</span>
+            <span className="text-text-muted text-xs">v2.5.5</span>
           </div>
         </div>
 
         {/* Download button à droite */}
         <a
-          href="https://github.com/DjoAHP/tone-lab-electron/releases/download/v2.5.4/ToneLab-2.5.4.Setup.exe"
-          download="ToneLab-2.5.4.Setup.exe"
+          href="https://github.com/DjoAHP/tone-lab-electron/releases/download/v2.5.5/ToneLab-2.5.5.Setup.exe"
+          download="ToneLab-2.5.5.Setup.exe"
           className="px-6 py-2 rounded-lg font-semibold text-white"
           style={{
             background: 'linear-gradient(135deg, #1D7195, #2898C8)',
