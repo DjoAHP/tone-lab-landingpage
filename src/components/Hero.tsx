@@ -4,19 +4,12 @@ const Hero: React.FC = () => {
   return (
     <section className="relative overflow-hidden flex items-center justify-center"
              style={{
-               background: 'linear-gradient(180deg, #13151C 0%, #1A1D27 50%, #13151C 100%)',
                height: '100vh',
                minHeight: '600px',
                padding: '0 40px',
              }}>
-      {/* Radial gradient overlay */}
-      <div className="absolute inset-0 pointer-events-none"
-           style={{
-             background: `
-               radial-gradient(circle at 20% 50%, rgba(29, 113, 149, 0.15) 0%, transparent 50%),
-               radial-gradient(circle at 80% 50%, rgba(29, 113, 149, 0.15) 0%, transparent 50%)
-             `,
-           }} />
+      {/* Shader overlay (ready for your custom gradient) */}
+      <div className="absolute inset-0 pointer-events-none" style={{ background: 'transparent' }} />
 
       {/* Logo en arrière-plan avec opacité */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">

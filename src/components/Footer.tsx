@@ -5,15 +5,12 @@ const Footer: React.FC = () => {
   return (
     <footer className="relative overflow-hidden"
             style={{
-              backgroundColor: '#0D0F14',
+              backgroundColor: 'var(--bg-primary)',
               padding: '40px 40px 20px',
-              borderTop: '1px solid rgba(29, 113, 149, 0.3)',
+              borderTop: '1px solid var(--border-medium)',
             }}>
-      {/* Radial gradient overlay */}
-      <div className="absolute inset-0 pointer-events-none"
-           style={{
-             background: `radial-gradient(circle at 50% 100%, rgba(29, 113, 149, 0.08) 0%, transparent 50%)`,
-           }} />
+      {/* Shader overlay (ready for your custom gradient) */}
+      <div className="absolute inset-0 pointer-events-none" style={{ background: 'transparent' }} />
 
       <div className="relative z-10 max-w-[1500px] mx-auto">
         {/* Main footer content */}

@@ -40,25 +40,13 @@ const features: Feature[] = [
   },
 ];
 
-const sectionStyle: React.CSSProperties = {
-  backgroundColor: 'var(--bg-secondary)',
-  padding: '100px 40px',
-};
-
-const overlayStyle: React.CSSProperties = {
-  background: `
-    radial-gradient(circle at 10% 90%, var(--border-subtle) 0%, transparent 40%),
-    radial-gradient(circle at 90% 10%, var(--border-medium) 0%, transparent 40%)
-  `,
-};
-
 const gridStyle: React.CSSProperties = {
   maxWidth: '1200px',
   margin: '0 auto',
 };
 
 const cardStyle: React.CSSProperties = {
-  background: 'linear-gradient(135deg, var(--bg-primary), var(--bg-secondary))',
+  background: 'var(--bg-primary)',
   borderColor: 'var(--border-subtle)',
   transition: 'all 200ms ease-out',
 };
@@ -70,9 +58,8 @@ const iconContainerStyle: React.CSSProperties = {
 
 const Features: React.FC = () => {
   return (
-    <section className="relative overflow-hidden" aria-labelledby="features-heading" style={sectionStyle}>
-      {/* Radial gradient overlay */}
-      <div className="absolute inset-0 pointer-events-none" style={overlayStyle} />
+    <section className="relative overflow-hidden"
+             style={{ backgroundColor: 'var(--bg-primary)', padding: '100px 40px' }}>
 
       <div className="relative z-10" style={gridStyle}>
         <h2 id="features-heading" className="text-4xl font-bold text-text-primary text-center mb-5">
