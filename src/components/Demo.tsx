@@ -30,7 +30,25 @@ const Demo: React.FC = () => {
           Découvrez ToneLab en action avec cette vidéo de démonstration
         </p>
 
-        {/* YouTube Video container */}
+        {/* Cloudinary Video container */}
+        <div className="max-w-[1000px] mx-auto rounded-2xl overflow-hidden" style={containerStyle}>
+          <div style={videoWrapperStyle}>
+            <video
+              className="absolute top-0 left-0 w-full h-full"
+              src="https://res.cloudinary.com/dmj4wyxcw/video/upload/v1778253761/Demo-ToneLab01_r5kfl6.mp4"
+              title="Démonstration de ToneLab"
+              controls
+              controlsList="nodownload"
+              muted
+              autoPlay
+              loop
+              playsInline
+              style={{ backgroundColor: 'var(--bg-primary)' }}
+            />
+          </div>
+        </div>
+
+        {/* YouTube Backup (commenté - à réactiver si Cloudinary pose problème)
         <div className="max-w-[1000px] mx-auto rounded-2xl overflow-hidden" style={containerStyle}>
           <div style={videoWrapperStyle}>
             <iframe
@@ -44,6 +62,7 @@ const Demo: React.FC = () => {
             />
           </div>
         </div>
+        */}
       </div>
     </section>
   );
