@@ -45,7 +45,7 @@ const Hero: React.FC = () => {
              style={{ animationDelay: '0.4s' }}>
           {/* Primary download button */}
           <a
-            href="https://github.com/DjoAHP/tone-lab-electron/releases/download/v2.5.5/ToneLab-2.6.5.Setup.exe"
+            href="https://github.com/DjoAHP/tone-lab-electron/releases/download/v2.6.5/ToneLab-2.6.5.Setup.exe"
             download="ToneLab-2.6.5.Setup.exe"
             className="relative px-6 py-2 rounded-lg font-semibold text-sm text-white inline-flex items-center gap-2 overflow-hidden"
             style={{
