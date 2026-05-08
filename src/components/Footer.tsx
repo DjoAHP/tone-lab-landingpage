@@ -39,7 +39,7 @@ const Footer: React.FC = () => {
               </h4>
               <ul className="space-y-3">
                 <li>
-                  <a href="https://github.com/DjoAHP/tone-lab-electron/releases/download/v2.5.5/ToneLab-2.5.5.Setup.exe" download="ToneLab-2.5.5.Setup.exe"
+                  <a href="https://github.com/DjoAHP/tone-lab-electron/releases/download/v2.5.5/ToneLab-2.6.5.Setup.exe" download="ToneLab-2.6.5.Setup.exe"
                      className="group relative text-text-secondary text-sm hover:text-accent-primary transition-colors duration-300 inline-flex items-center gap-2">
                     Télécharger
                     <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-accent-primary transition-all duration-500 ease-out group-hover:w-full"></span>
