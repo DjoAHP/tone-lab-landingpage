@@ -68,7 +68,7 @@ const Download: React.FC = () => {
 
           {/* Primary download button */}
           <a
-            href="https://github.com/DjoAHP/tone-lab-electron/releases/download/v2.5.5/ToneLab-2.6.5.Setup.exe"
+            href="https://github.com/DjoAHP/tone-lab-electron/releases/download/v2.6.5/ToneLab-2.6.5.Setup.exe"
             download="ToneLab-2.6.5.Setup.exe"
             aria-label="Télécharger ToneLab v2.5.5 pour Windows (134 MB, compatible 10/11 64-bit)"
             className="inline-block px-6 py-2 rounded-lg font-semibold text-sm text-white mb-5"

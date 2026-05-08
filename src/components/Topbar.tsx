@@ -18,7 +18,7 @@ const Topbar: React.FC = () => {
           />
           <div className="flex flex-col">
             <span className="text-text-primary text-lg font-bold leading-none">ToneLab</span>
-            <span className="text-text-muted text-xs">v2.5.5</span>
+            <span className="text-text-muted text-xs">v2.6.5</span>
           </div>
         </div>
 
