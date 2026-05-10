@@ -38,6 +38,12 @@ const features: Feature[] = [
     title: 'Chrono',
     description: 'Chronomètre précis pour chronométrer vos morceaux de musique.',
   },
+  {
+    id: 'docv',
+    icon: <img src="/assets/icons/docv-tool.svg" alt="DocV" className="w-7 h-7 brightness-0 invert" />,
+    title: 'DocV',
+    description: 'Visionneuse de documents pour visualiser vos fichiers JPG, PNG et PDF.',
+  },
 ];
 
 const gridStyle: React.CSSProperties = {
@@ -70,7 +76,7 @@ const Features: React.FC = () => {
         </p>
 
         {/* Features grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {features.map((feature) => (
             <div
               key={feature.id}
