@@ -68,9 +68,9 @@ const Download: React.FC = () => {
 
           {/* Primary download button */}
           <a
-            href="https://github.com/DjoAHP/tone-lab-electron/releases/download/v2.6.6/ToneLab-2.6.6.Setup.exe"
+            href="https://github.com/DjoAHP/tone-lab-electron/releases/download/v2.6.8/ToneLab-2.6.6.Setup.exe"
             download="ToneLab-2.6.6.Setup.exe"
-            aria-label="Télécharger ToneLab v2.6.6 pour Windows (138 MB, compatible 10/11 64-bit)"
+            aria-label="Télécharger ToneLab v2.6.8 pour Windows (133 MB, compatible 10/11 64-bit)"
             className="inline-block px-6 py-2 rounded-lg font-semibold text-sm text-white mb-5"
             style={primaryButtonStyle}
             onMouseEnter={(e) => {
@@ -89,7 +89,7 @@ const Download: React.FC = () => {
 
           {/* Version info */}
           <div className="text-text-secondary text-sm mb-8 leading-relaxed">
-            <strong className="text-text-primary">Version 2.6.6</strong> • 138 MB<br />
+            <strong className="text-text-primary">Version 2.6.8</strong> • 133 MB<br />
             Compatible Windows 10/11 (64-bit)
           </div>
 
