@@ -52,24 +52,24 @@ const gridStyle: React.CSSProperties = {
 };
 
 const cardStyle: React.CSSProperties = {
-  background: 'var(--bg-primary)',
-  borderColor: 'var(--border-subtle)',
-  transition: 'all 200ms ease-out',
+  background: 'rgba(26, 29, 39, 0.4)',
+  backdropFilter: 'blur(12px)',
+  WebkitBackdropFilter: 'blur(12px)',
+  borderColor: 'rgba(29, 113, 149, 0.15)',
+  transition: 'all 0.35s cubic-bezier(0.4, 0, 0.2, 1)',
   cursor: 'pointer',
 };
 
 const iconContainerStyle: React.CSSProperties = {
   background: 'linear-gradient(135deg, var(--accent-primary), var(--accent-light))',
-  transition: 'transform 200ms ease-out',
+  transition: 'transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1)',
+  boxShadow: 'none',
 };
 
 const Features: React.FC = () => {
   return (
     <section id="features" className="relative overflow-hidden py-20"
              style={{ backgroundColor: 'var(--bg-secondary)' }}>
-      {/* Shader overlay (ready for your custom gradient) */}
-      <div className="absolute inset-0 pointer-events-none" style={{ background: 'transparent' }} />
-
       <div className="relative z-10 max-w-[1200px] mx-auto px-4">
         <h2 className="text-4xl font-bold text-text-primary text-center mb-5">
           Fonctionnalités
@@ -85,21 +85,41 @@ const Features: React.FC = () => {
               className="group p-8 rounded-2xl border"
               style={{
                 ...cardStyle,
-                animationDelay: `${index * 0.1}s`,
+                transitionDelay: `${index * 80}ms`,
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'translateY(-8px)';
-                e.currentTarget.style.borderColor = 'var(--border-strong)';
-                e.currentTarget.style.boxShadow = '0 20px 60px rgba(0, 0, 0, 0.4), 0 0 80px rgba(29, 113, 149, 0.15)';
+                // Tilt 3D
+                const rect = e.currentTarget.getBoundingClientRect();
+                const centerX = rect.left + rect.width / 2;
+                const centerY = rect.top + rect.height / 2;
+                const mouseX = e.clientX;
+                const mouseY = e.clientY;
+                const rotateY = ((mouseX - centerX) / rect.width) * 6;
+                const rotateX = ((centerY - mouseY) / rect.height) * 6;
+
+                e.currentTarget.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-6px)`;
+                e.currentTarget.style.borderColor = 'rgba(29, 113, 149, 0.5)';
+                e.currentTarget.style.boxShadow = '0 20px 60px rgba(0, 0, 0, 0.4), 0 0 40px rgba(29, 113, 149, 0.12)';
+
+                // Glow sur l'icône
+                const iconEl = e.currentTarget.querySelector(".icon-glow") as HTMLElement | null;
+                if (iconEl) {
+                  iconEl.style.boxShadow = '0 0 25px rgba(29, 113, 149, 0.5), 0 0 50px rgba(29, 113, 149, 0.2)';
+                }
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.borderColor = 'var(--border-subtle)';
+                e.currentTarget.style.transform = 'perspective(800px) rotateX(0deg) rotateY(0deg) translateY(0)';
+                e.currentTarget.style.borderColor = 'rgba(29, 113, 149, 0.15)';
                 e.currentTarget.style.boxShadow = 'none';
+
+                const iconEl = e.currentTarget.querySelector(".icon-glow") as HTMLElement | null;
+                if (iconEl) {
+                  iconEl.style.boxShadow = 'none';
+                }
               }}
             >
               <div
-                className="w-[60px] h-[60px] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110"
+                className="w-[60px] h-[60px] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 icon-glow"
                 style={iconContainerStyle}
               >
                 {feature.icon}

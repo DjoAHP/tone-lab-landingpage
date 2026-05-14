@@ -5,6 +5,7 @@ import Features from './components/Features';
 import Demo from './components/Demo';
 import Download from './components/Download';
 import Footer from './components/Footer';
+import ScrollReveal from './components/ScrollReveal';
 
 const App: React.FC = () => {
   return (
@@ -15,20 +16,35 @@ const App: React.FC = () => {
         <div className="max-w-[1500px] mx-auto px-4">
           <hr className="border-t border-[var(--border-subtle)]" />
         </div>
-        <Features />
+
+        <ScrollReveal delay={0}>
+          <Features />
+        </ScrollReveal>
+
         <div className="max-w-[1500px] mx-auto px-4">
           <hr className="border-t border-[var(--border-subtle)]" />
         </div>
-        <Demo />
+
+        <ScrollReveal delay={0.2}>
+          <Demo />
+        </ScrollReveal>
+
         <div className="max-w-[1500px] mx-auto px-4">
           <hr className="border-t border-[var(--border-subtle)]" />
         </div>
-        <Download />
+
+        <ScrollReveal delay={0.4}>
+          <Download />
+        </ScrollReveal>
       </main>
+
       <div className="max-w-[1500px] mx-auto px-4">
         <hr className="border-t border-[var(--border-subtle)]" />
       </div>
-      <Footer />
+
+      <ScrollReveal delay={0.15}>
+        <Footer />
+      </ScrollReveal>
     </div>
   );
 };

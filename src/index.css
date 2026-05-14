@@ -32,6 +32,11 @@ body {
   font-family: 'Geist Variable', system-ui, -apple-system, sans-serif;
 }
 
+/* Scroll offset pour compenser la topbar sticky (70px) */
+section[id] {
+  scroll-margin-top: 70px;
+}
+
 /* Custom animations */
 @keyframes fadeInUp {
   from {
