@@ -18,10 +18,7 @@ const videoWrapperStyle: React.CSSProperties = {
 
 const Demo: React.FC = () => {
   return (
-    <section className="relative overflow-hidden" style={sectionStyle}>
-      {/* Shader overlay (ready for your custom gradient) */}
-      <div className="absolute inset-0 pointer-events-none" style={{ background: 'transparent' }} />
-
+    <section id="demo" className="relative overflow-hidden" style={sectionStyle}>
       <div className="relative z-10 max-w-[1200px] mx-auto">
         <h2 className="text-4xl font-bold text-text-primary text-center mb-5">
           Démo
@@ -30,7 +27,6 @@ const Demo: React.FC = () => {
           Découvrez ToneLab en action avec cette vidéo de démonstration
         </p>
 
-        {/* Cloudinary Video container */}
         <div className="max-w-[1000px] mx-auto rounded-2xl overflow-hidden" style={containerStyle}>
           <div style={videoWrapperStyle}>
             <video
@@ -43,26 +39,11 @@ const Demo: React.FC = () => {
               autoPlay
               loop
               playsInline
+              disablePictureInPicture
               style={{ backgroundColor: 'var(--bg-primary)' }}
             />
           </div>
         </div>
-
-        {/* YouTube Backup (commenté - à réactiver si Cloudinary pose problème)
-        <div className="max-w-[1000px] mx-auto rounded-2xl overflow-hidden" style={containerStyle}>
-          <div style={videoWrapperStyle}>
-            <iframe
-              className="absolute top-0 left-0 w-full h-full"
-              src="https://www.youtube.com/embed/wkIuMtFKtQE?autoplay=1&muted=1"
-              title="Démonstration de ToneLab"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen={false}
-              style={{ backgroundColor: 'var(--bg-primary)' }}
-            />
-          </div>
-        </div>
-        */}
       </div>
     </section>
   );

@@ -1,4 +1,5 @@
 import React from 'react';
+import { CONFIG } from '../config';
 
 const sectionStyle: React.CSSProperties = {
   backgroundColor: 'var(--bg-primary)',
@@ -22,23 +23,24 @@ const primaryButtonStyle: React.CSSProperties = {
   background: 'linear-gradient(135deg, var(--accent-primary), var(--accent-light))',
   boxShadow: '0 10px 30px rgba(29, 113, 149, 0.4)',
   transition: 'all 200ms ease-out',
+  cursor: 'pointer',
 };
 
 const pwaButtonStyle: React.CSSProperties = {
-  backgroundColor: 'rgba(255, 255, 255, 0.1)',
-  color: '#FFFFFF',
-  border: '2px solid var(--border-strong)',
+  backgroundColor: 'rgba(255, 255, 255, 0.05)',
+  color: '#666666',
+  border: '2px solid rgba(255, 255, 255, 0.1)',
   backdropFilter: 'blur(10px)',
-  transition: 'all 200ms ease-out',
+  cursor: 'not-allowed',
 };
 
 const Download: React.FC = () => {
   return (
-    <section className="relative overflow-hidden" style={sectionStyle}>
+    <section id="download" className="relative overflow-hidden" style={sectionStyle}>
       {/* Shader overlay (ready for your custom gradient) */}
       <div className="absolute inset-0 pointer-events-none" style={{ background: 'transparent' }} />
 
-      <div className="relative z-10 max-w-[1200px] mx-auto">
+      <div className="relative z-10 max-w-[600px] mx-auto">
         <h2 className="text-4xl font-bold text-text-primary mb-5">
           Télécharger
         </h2>
@@ -47,7 +49,7 @@ const Download: React.FC = () => {
         </p>
 
         {/* Download card */}
-        <div className="max-w-[600px] mx-auto rounded-2xl p-[52px]"
+        <div className="rounded-2xl p-[52px]"
              style={cardStyle}
              onMouseEnter={(e) => {
                e.currentTarget.style.transform = 'translateY(-8px)';
@@ -68,9 +70,9 @@ const Download: React.FC = () => {
 
           {/* Primary download button */}
           <a
-            href="https://github.com/DjoAHP/tone-lab-electron/releases/download/v2.6.8/ToneLab-2.6.6.Setup.exe"
-            download="ToneLab-2.6.6.Setup.exe"
-            aria-label="Télécharger ToneLab v2.6.8 pour Windows (133 MB, compatible 10/11 64-bit)"
+            href={`${CONFIG.DOWNLOAD_BASE_URL}/download/v${CONFIG.APP_VERSION}/ToneLab-${CONFIG.APP_VERSION}.Setup.exe`}
+            download={`ToneLab-${CONFIG.APP_VERSION}.Setup.exe`}
+            aria-label={`Télécharger ToneLab v${CONFIG.APP_VERSION} pour Windows (133 MB, compatible 10/11 64-bit)`}
             className="inline-block px-6 py-2 rounded-lg font-semibold text-sm text-white mb-5"
             style={primaryButtonStyle}
             onMouseEnter={(e) => {
@@ -89,28 +91,19 @@ const Download: React.FC = () => {
 
           {/* Version info */}
           <div className="text-text-secondary text-sm mb-8 leading-relaxed">
-            <strong className="text-text-primary">Version 2.6.8</strong> • 133 MB<br />
+            <strong className="text-text-primary">Version {CONFIG.APP_VERSION}</strong> • 133 MB<br />
             Compatible Windows 10/11 (64-bit)
           </div>
 
-          {/* PWA button */}
+          {/* PWA button — disabled (bientôt disponible) */}
           <button
-            aria-label="Ouvrir la version Progressive Web App (PWA) de ToneLab"
-            aria-disabled="true"
-            className="px-[40px] py-4 rounded-xl font-semibold text-lg inline-flex items-center gap-3"
+            disabled
+            aria-label="Version Progressive Web App (PWA) bientôt disponible"
+            className="px-[40px] py-4 rounded-xl font-semibold text-lg inline-flex items-center gap-3 opacity-60"
             style={pwaButtonStyle}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'scale(1.05)';
-              e.currentTarget.style.borderColor = 'rgba(29, 113, 149, 0.8)';
-              e.currentTarget.style.boxShadow = '0 10px 30px rgba(29, 113, 149, 0.3)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = 'scale(1)';
-              e.currentTarget.style.borderColor = 'rgba(29, 113, 149, 0.5)';
-              e.currentTarget.style.boxShadow = 'none';
-            }}
+            title="Bientôt disponible"
           >
-            Ouvrir la version PWA (bientôt disponible)
+            🔜 Ouvrir la version PWA (bientôt disponible)
           </button>
         </div>
       </div>

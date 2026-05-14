@@ -1,5 +1,6 @@
 import React from 'react';
 import { Mail } from 'lucide-react';
+import { CONFIG } from '../config';
 
 const Footer: React.FC = () => {
   return (
@@ -22,10 +23,11 @@ const Footer: React.FC = () => {
                 src="/assets/logo.svg"
                 alt="ToneLab"
                 className="h-8 w-auto"
+                loading="lazy"
               />
               <div className="flex flex-col">
                 <span className="text-text-primary text-lg font-bold leading-none">ToneLab</span>
-                <span className="text-text-muted text-xs">v2.6.8</span>
+                <span className="text-text-muted text-xs">v{CONFIG.APP_VERSION}</span>
               </div>
             </div>
           </div>
@@ -39,7 +41,8 @@ const Footer: React.FC = () => {
               </h4>
               <ul className="space-y-3">
                 <li>
-                  <a href="https://github.com/DjoAHP/tone-lab-electron/releases/download/v2.6.8/ToneLab-2.6.8.Setup.exe" download="ToneLab-2.6.8.Setup.exe"
+                  <a href={`${CONFIG.DOWNLOAD_BASE_URL}/download/v${CONFIG.APP_VERSION}/ToneLab-${CONFIG.APP_VERSION}.Setup.exe`}
+                     download={`ToneLab-${CONFIG.APP_VERSION}.Setup.exe`}
                      className="group relative text-text-secondary text-sm hover:text-accent-primary transition-colors duration-300 inline-flex items-center gap-2">
                     Télécharger
                     <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-accent-primary transition-all duration-500 ease-out group-hover:w-full"></span>
@@ -53,7 +56,7 @@ const Footer: React.FC = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="#"
+                  <a href="#features"
                      className="group relative text-text-secondary text-sm hover:text-accent-primary transition-colors duration-300 inline-flex items-center gap-2">
                     Documentation
                     <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-accent-primary transition-all duration-500 ease-out group-hover:w-full"></span>
@@ -62,14 +65,14 @@ const Footer: React.FC = () => {
               </ul>
             </div>
 
-          {/* Community column */}
-          <div>
-            <h4 className="text-text-primary text-sm font-semibold mb-4 uppercase tracking-wider">
+            {/* Community column */}
+            <div>
+              <h4 className="text-text-primary text-sm font-semibold mb-4 uppercase tracking-wider">
                 Communauté
               </h4>
               <ul className="space-y-3">
                 <li>
-                  <a href="https://github.com/DjoAHP/tone-lab-electron"
+                  <a href={CONFIG.GITHUB_REPO}
                      target="_blank"
                      rel="noopener noreferrer"
                      className="text-text-secondary text-sm hover:text-accent-primary transition-colors inline-flex items-center gap-2">
@@ -87,7 +90,7 @@ const Footer: React.FC = () => {
             © {new Date().getFullYear()} ToneLab. Tous droits réservés.
           </div>
           <div className="flex gap-4">
-            <a href="https://github.com/DjoAHP/tone-lab-electron"
+            <a href={CONFIG.GITHUB_REPO}
                target="_blank"
                rel="noopener noreferrer"
                className="w-9 h-9 rounded-lg flex items-center justify-center text-text-secondary hover:text-accent-primary hover:bg-[rgba(43,79,67,0.2)] transition-all"
@@ -95,7 +98,7 @@ const Footer: React.FC = () => {
                aria-label="GitHub">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
             </a>
-            <a href="mailto:contact@tonelab.com"
+            <a href="mailto:{CONFIG.CONTACT_EMAIL}"
                className="w-9 h-9 rounded-lg flex items-center justify-center text-text-secondary hover:text-accent-primary hover:bg-[rgba(43,79,67,0.2)] transition-all"
                style={{ border: '1px solid rgba(255, 255, 255, 0.1)' }}
                aria-label="Contact par email">

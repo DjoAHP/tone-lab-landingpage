@@ -1,4 +1,5 @@
 import React from 'react';
+import { CONFIG } from '../config';
 
 const Hero: React.FC = () => {
   return (
@@ -19,6 +20,7 @@ const Hero: React.FC = () => {
           className="w-[600px] h-auto"
           style={{ opacity: 0.05 }}
           aria-hidden="true"
+          loading="lazy"
         />
       </div>
 
@@ -45,8 +47,8 @@ const Hero: React.FC = () => {
              style={{ animationDelay: '0.4s' }}>
           {/* Primary download button */}
           <a
-            href="https://github.com/DjoAHP/tone-lab-electron/releases/download/v2.6.8/ToneLab-2.6.8.Setup.exe"
-            download="ToneLab-2.6.8.Setup.exe"
+            href={`${CONFIG.DOWNLOAD_BASE_URL}/download/v${CONFIG.APP_VERSION}/ToneLab-${CONFIG.APP_VERSION}.Setup.exe`}
+            download={`ToneLab-${CONFIG.APP_VERSION}.Setup.exe`}
             className="relative px-6 py-2 rounded-lg font-semibold text-sm text-white inline-flex items-center gap-2 overflow-hidden"
             style={{
               background: 'linear-gradient(135deg, #1D7195, #2898C8)',
