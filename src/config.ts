@@ -4,7 +4,7 @@
  */
 
 export const CONFIG = {
-  APP_VERSION: "2.6.8",
+  APP_VERSION: "2.6.9",
   DOWNLOAD_BASE_URL: "https://github.com/DjoAHP/tone-lab-electron/releases",
   GITHUB_REPO: "https://github.com/DjoAHP/tone-lab-electron",
   CONTACT_EMAIL: "contact@tonelab.com",
