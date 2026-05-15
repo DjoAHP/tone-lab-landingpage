@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { CONFIG } from '../config';
 
 const Topbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -47,7 +48,7 @@ const Topbar: React.FC = () => {
           />
           <div className="flex flex-col">
             <span className="text-text-primary text-lg font-bold leading-none">ToneLab</span>
-            <span className="text-text-muted text-xs">v2.6.8</span>
+            <span className="text-text-muted text-xs">v{CONFIG.APP_VERSION}</span>
           </div>
         </button>
 
