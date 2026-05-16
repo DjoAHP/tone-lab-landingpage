@@ -26,14 +26,6 @@ const primaryButtonStyle: React.CSSProperties = {
   cursor: 'pointer',
 };
 
-const pwaButtonStyle: React.CSSProperties = {
-  backgroundColor: 'rgba(255, 255, 255, 0.05)',
-  color: '#666666',
-  border: '2px solid rgba(255, 255, 255, 0.1)',
-  backdropFilter: 'blur(10px)',
-  cursor: 'not-allowed',
-};
-
 const Download: React.FC = () => {
   return (
     <section id="download" className="relative overflow-hidden" style={sectionStyle}>
@@ -95,16 +87,31 @@ const Download: React.FC = () => {
             Compatible Windows 10/11 (64-bit)
           </div>
 
-          {/* PWA button — disabled (bientôt disponible) */}
-          <button
-            disabled
-            aria-label="Version Progressive Web App (PWA) bientôt disponible"
-            className="px-[40px] py-4 rounded-xl font-semibold text-lg inline-flex items-center gap-3 opacity-60"
-            style={pwaButtonStyle}
-            title="Bientôt disponible"
+          {/* PWA button — active link */}
+          <a
+            href={CONFIG.PWA_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Ouvrir ToneLab en version PWA (Progressive Web App)"
+            className="inline-block px-[40px] py-4 rounded-xl font-semibold text-lg"
+            style={{
+              background: 'linear-gradient(135deg, var(--accent-primary), var(--accent-light))',
+              boxShadow: '0 10px 30px rgba(29, 113, 149, 0.4)',
+              transition: 'all 200ms ease-out',
+              cursor: 'pointer',
+              color: 'white',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'scale(1.05)';
+              e.currentTarget.style.boxShadow = '0 2px 10px rgba(29, 113, 149, 0.2)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'scale(1)';
+              e.currentTarget.style.boxShadow = '0 10px 30px rgba(29, 113, 149, 0.4)';
+            }}
           >
-            🔜 Ouvrir la version PWA (bientôt disponible)
-          </button>
+            🌐 Ouvrir la version PWA
+          </a>
         </div>
       </div>
     </section>

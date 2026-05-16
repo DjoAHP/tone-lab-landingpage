@@ -70,30 +70,29 @@ const Hero: React.FC = () => {
           </a>
 
           {/* PWA button */}
-          <button
-            className="relative px-6 py-2 rounded-lg font-semibold text-sm inline-flex items-center gap-2 overflow-hidden"
+          <a
+            href={CONFIG.PWA_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative px-6 py-2 rounded-lg font-semibold text-sm text-white inline-flex items-center gap-2 overflow-hidden"
             style={{
-              backgroundColor: 'rgba(255, 255, 255, 0.05)',
-              color: 'var(--accent-primary)',
-              border: '1px solid var(--border-medium)',
-              backdropFilter: 'blur(10px)',
+              background: 'linear-gradient(135deg, #1D7195, #2898C8)',
+              boxShadow: '0 4px 15px rgba(29, 113, 149, 0.3)',
               transition: 'all 200ms ease-out',
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = 'scale(1.05)';
-              e.currentTarget.style.boxShadow = '0 8px 25px rgba(29, 113, 149, 0.4)';
-              e.currentTarget.style.borderColor = 'var(--border-strong)';
+              e.currentTarget.style.boxShadow = '0 8px 25px rgba(29, 113, 149, 0.5)';
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = 'scale(1)';
-              e.currentTarget.style.boxShadow = 'none';
-              e.currentTarget.style.borderColor = 'var(--border-medium)';
+              e.currentTarget.style.boxShadow = '0 4px 15px rgba(29, 113, 149, 0.3)';
             }}
           >
             {/* Shimmer effect */}
-            <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500 ease-out"></span>
-            Version PWA
-          </button>
+            <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500 ease-out"></span>
+            Ouvrir la version PWA
+          </a>
         </div>
       </div>
     </section>
