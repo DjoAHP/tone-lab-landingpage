@@ -1,24 +1,29 @@
-import React from 'react';
+import React from "react";
 
 const sectionStyle: React.CSSProperties = {
-  backgroundColor: 'var(--bg-primary)',
-  padding: '100px 40px',
+  backgroundColor: "var(--bg-primary)",
+  padding: "100px 40px",
 };
 
 const containerStyle: React.CSSProperties = {
-  boxShadow: '0 30px 80px rgba(0, 0, 0, 0.6), 0 0 100px rgba(29, 113, 149, 0.15)',
-  border: '1px solid var(--border-medium)',
+  boxShadow:
+    "0 30px 80px rgba(0, 0, 0, 0.6), 0 0 100px rgba(29, 113, 149, 0.15)",
+  border: "1px solid var(--border-medium)",
 };
 
 const videoWrapperStyle: React.CSSProperties = {
-  position: 'relative' as const,
-  width: '100%',
-  paddingTop: '56.25%', // 16:9 aspect ratio
+  position: "relative" as const,
+  width: "100%",
+  paddingTop: "56.25%", // 16:9 aspect ratio
 };
 
 const Demo: React.FC = () => {
   return (
-    <section id="demo" className="relative overflow-hidden" style={sectionStyle}>
+    <section
+      id="demo"
+      className="relative overflow-hidden"
+      style={sectionStyle}
+    >
       <div className="relative z-10 max-w-[1200px] mx-auto">
         <h2 className="text-4xl font-bold text-text-primary text-center mb-5">
           Démo
@@ -27,11 +32,14 @@ const Demo: React.FC = () => {
           Découvrez ToneLab en action avec cette vidéo de démonstration
         </p>
 
-        <div className="max-w-[1000px] mx-auto rounded-2xl overflow-hidden" style={containerStyle}>
+        <div
+          className="max-w-[1000px] mx-auto rounded-2xl overflow-hidden"
+          style={containerStyle}
+        >
           <div style={videoWrapperStyle}>
             <video
               className="absolute top-0 left-0 w-full h-full"
-              src="https://res.cloudinary.com/dmj4wyxcw/video/upload/v1778253761/Demo-ToneLab01_r5kfl6.mp4"
+              src="https://res.cloudinary.com/dmj4wyxcw/video/upload/v1779187633/Demo02_dmngg8.mov"
               title="Démonstration de ToneLab"
               controls
               controlsList="nodownload"
@@ -40,7 +48,7 @@ const Demo: React.FC = () => {
               loop
               playsInline
               disablePictureInPicture
-              style={{ backgroundColor: 'var(--bg-primary)' }}
+              style={{ backgroundColor: "var(--bg-primary)" }}
             />
           </div>
         </div>
