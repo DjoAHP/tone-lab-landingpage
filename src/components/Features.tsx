@@ -5,44 +5,96 @@ interface Feature {
   icon: React.ReactNode;
   title: string;
   description: string;
+  connectionIcon?: string;
 }
 
 const features: Feature[] = [
   {
-    id: 'diapa',
-    icon: <img src="/assets/icons/diapa-tool.svg" alt="Diapa" className="w-7 h-7 brightness-0 invert" loading="lazy" />,
-    title: 'Diapa',
-    description: 'Diapason avancé sous forme de clavier virtuel.',
+    id: "diapa",
+    icon: (
+      <img
+        src="/assets/icons/diapa-tool.svg"
+        alt="Diapa"
+        className="w-7 h-7 brightness-0 invert"
+        loading="lazy"
+      />
+    ),
+    title: "Diapa",
+    description: "Diapason avancé sous forme de clavier virtuel.",
   },
   {
-    id: 'stack',
-    icon: <img src="/assets/icons/stack-tool.svg" alt="Stack" className="w-7 h-7 brightness-0 invert" loading="lazy" />,
-    title: 'Stack',
-    description: 'Recherche de sons et identité sonore via interface plugins et instruments.',
+    id: "stack",
+    icon: (
+      <img
+        src="/assets/icons/stack-tool.svg"
+        alt="Stack"
+        className="w-7 h-7 brightness-0 invert"
+        loading="lazy"
+      />
+    ),
+    title: "Stack",
+    description:
+      "Recherche de sons et identité sonore via interface plugins et instruments.",
   },
   {
-    id: 'metro',
-    icon: <img src="/assets/icons/metro-tool.svg" alt="Metro" className="w-7 h-7 brightness-0 invert" loading="lazy" />,
-    title: 'Metro',
-    description: 'Métronome avancé avec signaux visuels et auditifs précis.',
+    id: "metro",
+    icon: (
+      <img
+        src="/assets/icons/metro-tool.svg"
+        alt="Metro"
+        className="w-7 h-7 brightness-0 invert"
+        loading="lazy"
+      />
+    ),
+    title: "Metro",
+    description:
+      "Métronome avancé avec signaux visuels et auditifs précis.",
+    connectionIcon: "/assets/features/metro-docv.svg",
   },
   {
-    id: 'setlist',
-    icon: <img src="/assets/icons/setlist-tool.svg" alt="Setlist" className="w-7 h-7 brightness-0 invert" loading="lazy" />,
-    title: 'Setlist',
-    description: 'Permet de créer des setlists pour groupe de musique.',
+    id: "setlist",
+    icon: (
+      <img
+        src="/assets/icons/setlist-tool.svg"
+        alt="Setlist"
+        className="w-7 h-7 brightness-0 invert"
+        loading="lazy"
+      />
+    ),
+    title: "Setlist",
+    description:
+      "Permet de créer des setlists pour groupe de musique.",
+    connectionIcon: "/assets/features/setlist-chrono.svg",
   },
   {
-    id: 'chrono',
-    icon: <img src="/assets/icons/chrono-tool.svg" alt="Chrono" className="w-7 h-7 brightness-0 invert" loading="lazy" />,
-    title: 'Chrono',
-    description: 'Chronomètre précis pour chronométrer vos morceaux de musique.',
+    id: "chrono",
+    icon: (
+      <img
+        src="/assets/icons/chrono-tool.svg"
+        alt="Chrono"
+        className="w-7 h-7 brightness-0 invert"
+        loading="lazy"
+      />
+    ),
+    title: "Chrono",
+    description:
+      "Chronomètre précis pour chronométrer vos morceaux de musique.",
+    connectionIcon: "/assets/features/chrono-setlist.svg",
   },
   {
-    id: 'docv',
-    icon: <img src="/assets/icons/docv-tool.svg" alt="DocV" className="w-7 h-7 brightness-0 invert" loading="lazy" />,
-    title: 'DocV',
-    description: 'Visionneuse de documents pour visualiser vos fichiers JPG, PNG et PDF.',
+    id: "docv",
+    icon: (
+      <img
+        src="/assets/icons/docv-tool.svg"
+        alt="DocV"
+        className="w-7 h-7 brightness-0 invert"
+        loading="lazy"
+      />
+    ),
+    title: "DocV",
+    description:
+      "Visionneuse de documents pour visualiser vos fichiers JPG, PNG et PDF.",
+    connectionIcon: "/assets/features/docv-metro.svg",
   },
 ];
 
@@ -82,7 +134,7 @@ const Features: React.FC = () => {
           {features.map((feature, index) => (
             <div
               key={feature.id}
-              className="group p-8 rounded-2xl border"
+              className="group relative p-8 rounded-2xl border"
               style={{
                 ...cardStyle,
                 transitionDelay: `${index * 80}ms`,
@@ -118,6 +170,15 @@ const Features: React.FC = () => {
                 }
               }}
             >
+              {feature.connectionIcon && (
+                <img
+                  src={feature.connectionIcon}
+                  alt={`${feature.title} connection`}
+                  className="absolute top-4 right-4 w-10 h-10 opacity-60 hover:opacity-100 transition-opacity"
+                  style={{ filter: 'brightness(0) invert(1)' }}
+                  loading="lazy"
+                />
+              )}
               <div
                 className="w-[60px] h-[60px] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 icon-glow"
                 style={iconContainerStyle}
