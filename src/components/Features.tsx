@@ -93,7 +93,7 @@ const features: Feature[] = [
     ),
     title: "DocV",
     description:
-      "Visionneuse de documents pour visualiser vos fichiers JPG, PNG et PDF.",
+      "Visionneuse de documents pour visualiser vos fichiers JPG, PNG, PDF avec lecteur audio YouTube intégré.",
     connectionIcon: "/assets/features/docv-metro.svg",
   },
 ];
