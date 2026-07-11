@@ -67,20 +67,6 @@ const features: Feature[] = [
     connectionIcon: "/assets/features/setlist-chrono.svg",
   },
   {
-    id: "setlist-chrono",
-    icon: (
-      <img
-        src="/assets/icons/setlist-chrono-tool.svg"
-        alt="Setlist Chrono"
-        className="w-7 h-7 brightness-0 invert"
-        loading="lazy"
-      />
-    ),
-    title: "Setlist Chrono",
-    description:
-      "Setlist augmentée d'un chronomètre pour piloter et mesurer vos transitions de morceaux.",
-  },
-  {
     id: "chrono",
     icon: (
       <img
@@ -141,10 +127,10 @@ const Features: React.FC = () => {
           Fonctionnalités
         </h2>
         <p className="text-lg text-text-secondary text-center max-w-[600px] mx-auto mb-15 leading-relaxed">
-           7 outils intégrés pour couvrir tous vos besoins musicaux
+           6 outils intégrés pour couvrir tous vos besoins musicaux
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" style={gridStyle}>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" style={gridStyle}>
           {features.map((feature, index) => (
             <div
               key={feature.id}
