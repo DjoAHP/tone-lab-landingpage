@@ -25,7 +25,7 @@ Landing page (Vite + React 19 + TypeScript, Tailwind v4) for ToneLab, an Electro
 
 ## Architecture (what is not obvious from filenames)
 
-- `src/config.ts` is the single source of truth for `APP_VERSION` (currently `2.6.10`), download URL, GitHub repo, Cloudinary demo URL. **Edit only this file for version/URL changes** — they are scattered across components otherwise.
+- `src/config.ts` is the single source of truth for `APP_VERSION` (currently `2.7.11`), download URL, GitHub repo, Cloudinary demo URL. **Edit only this file for version/URL changes** — they are scattered across components otherwise.
 - No router, no state management. The page is one long scroll; "navigation" is `<button onClick>` calling `scrollIntoView` on section `id`s. The Topbar logo scrolls to top. Sections are wrapped in `src/components/ScrollReveal.tsx`.
 - `public/` assets are served as-is. Tool SVGs live in `public/assets/icons/*.svg` and are referenced via `<img src="/assets/icons/…">`. The demo video is hosted on Cloudinary (not bundled).
 - Components use inline `interface` prop declarations; `Features.tsx` is the only one exporting its interface.
