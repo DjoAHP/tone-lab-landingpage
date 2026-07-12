@@ -62,8 +62,8 @@ const Download: React.FC = () => {
 
           {/* Primary download button */}
           <a
-            href={`${CONFIG.DOWNLOAD_BASE_URL}/download/v${CONFIG.APP_VERSION}/ToneLab-${CONFIG.APP_VERSION}.windows.exe`}
-            download={`ToneLab-${CONFIG.APP_VERSION}.windows.exe`}
+            href={`${CONFIG.DOWNLOAD_BASE_URL}/download/v${CONFIG.APP_VERSION}/ToneLab-${CONFIG.APP_VERSION}_windows.exe`}
+            download={`ToneLab-${CONFIG.APP_VERSION}_windows.exe`}
             aria-label={`Télécharger ToneLab v${CONFIG.APP_VERSION} pour Windows (133 MB, compatible 10/11 64-bit)`}
             className="inline-block px-6 py-2 rounded-lg font-semibold text-sm text-white mb-5"
             style={primaryButtonStyle}
