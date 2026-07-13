@@ -65,7 +65,7 @@ const Download: React.FC = () => {
             href={`${CONFIG.DOWNLOAD_BASE_URL}/download/v${CONFIG.APP_VERSION}/ToneLab-${CONFIG.APP_VERSION}_windows.exe`}
             download={`ToneLab-${CONFIG.APP_VERSION}_windows.exe`}
             aria-label={`Télécharger ToneLab v${CONFIG.APP_VERSION} pour Windows (133 MB, compatible 10/11 64-bit)`}
-            className="inline-flex items-center justify-center gap-3 px-6 py-2 rounded-lg font-semibold text-sm text-white mb-3"
+            className="flex items-center justify-center gap-3 w-full px-6 py-2 rounded-lg font-semibold text-sm text-white mb-3"
             style={primaryButtonStyle}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = 'scale(1.05)';
@@ -85,7 +85,7 @@ const Download: React.FC = () => {
             href={`${CONFIG.DOWNLOAD_BASE_URL}/download/v${CONFIG.APP_VERSION}/ToneLab-${CONFIG.APP_VERSION}_linux.deb`}
             download={`ToneLab-${CONFIG.APP_VERSION}_linux.deb`}
             aria-label={`Télécharger ToneLab v${CONFIG.APP_VERSION} pour Linux (Debian/Ubuntu 64-bit)`}
-            className="inline-flex items-center justify-center gap-3 px-6 py-2 rounded-lg font-semibold text-sm text-white mb-5"
+            className="flex items-center justify-center gap-3 w-full px-6 py-2 rounded-lg font-semibold text-sm text-white mb-5"
             style={primaryButtonStyle}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = 'scale(1.05)';
