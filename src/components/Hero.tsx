@@ -43,9 +43,9 @@ const Hero: React.FC = () => {
         </p>
 
         {/* Buttons with modern hover effects */}
-        <div className="flex gap-5 justify-center animate-fadeInUp"
+        <div className="flex flex-col gap-3 justify-center items-center animate-fadeInUp"
              style={{ animationDelay: '0.4s' }}>
-          {/* Primary download button */}
+          {/* Primary download button — Windows */}
           <a
             href={`${CONFIG.DOWNLOAD_BASE_URL}/download/v${CONFIG.APP_VERSION}/ToneLab-${CONFIG.APP_VERSION}_windows.exe`}
             download={`ToneLab-${CONFIG.APP_VERSION}_windows.exe`}
@@ -66,7 +66,33 @@ const Hero: React.FC = () => {
           >
             {/* Shimmer effect */}
             <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500 ease-out"></span>
-            Télécharger (.exe)
+            <img src="/assets/icons/windows.svg" alt="Windows" className="w-5 h-5 brightness-0 invert" />
+            Télécharger pour Windows
+          </a>
+
+          {/* Primary download button — Linux */}
+          <a
+            href={`${CONFIG.DOWNLOAD_BASE_URL}/download/v${CONFIG.APP_VERSION}/ToneLab-${CONFIG.APP_VERSION}_linux.deb`}
+            download={`ToneLab-${CONFIG.APP_VERSION}_linux.deb`}
+            className="relative px-6 py-2 rounded-lg font-semibold text-sm text-white inline-flex items-center gap-2 overflow-hidden"
+            style={{
+              background: 'linear-gradient(135deg, #1D7195, #2898C8)',
+              boxShadow: '0 4px 15px rgba(29, 113, 149, 0.3)',
+              transition: 'all 200ms ease-out',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'scale(1.05)';
+              e.currentTarget.style.boxShadow = '0 8px 25px rgba(29, 113, 149, 0.5)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'scale(1)';
+              e.currentTarget.style.boxShadow = '0 4px 15px rgba(29, 113, 149, 0.3)';
+            }}
+          >
+            {/* Shimmer effect */}
+            <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500 ease-out"></span>
+            <img src="/assets/icons/linux.svg" alt="Linux" className="w-5 h-5 brightness-0 invert" />
+            Télécharger pour Linux
           </a>
 
           {/* PWA button */}
