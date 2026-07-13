@@ -60,12 +60,12 @@ const Download: React.FC = () => {
             <span className="text-4xl text-white" aria-hidden="true">⬇</span>
           </div>
 
-          {/* Primary download button */}
+          {/* Primary download button — Windows */}
           <a
             href={`${CONFIG.DOWNLOAD_BASE_URL}/download/v${CONFIG.APP_VERSION}/ToneLab-${CONFIG.APP_VERSION}_windows.exe`}
             download={`ToneLab-${CONFIG.APP_VERSION}_windows.exe`}
             aria-label={`Télécharger ToneLab v${CONFIG.APP_VERSION} pour Windows (133 MB, compatible 10/11 64-bit)`}
-            className="inline-block px-6 py-2 rounded-lg font-semibold text-sm text-white mb-5"
+            className="inline-flex items-center justify-center gap-3 px-6 py-2 rounded-lg font-semibold text-sm text-white mb-3"
             style={primaryButtonStyle}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = 'scale(1.05)';
@@ -76,15 +76,34 @@ const Download: React.FC = () => {
               e.currentTarget.style.boxShadow = '0 10px 30px rgba(29, 113, 149, 0.4)';
             }}
           >
-            <span className="inline-flex items-center gap-3">
-              Télécharger pour Windows
-            </span>
+            <img src="/assets/icons/windows.svg" alt="Windows" className="w-5 h-5 brightness-0 invert" />
+            Télécharger pour Windows
+          </a>
+
+          {/* Primary download button — Linux */}
+          <a
+            href={`${CONFIG.DOWNLOAD_BASE_URL}/download/v${CONFIG.APP_VERSION}/ToneLab-${CONFIG.APP_VERSION}_linux.deb`}
+            download={`ToneLab-${CONFIG.APP_VERSION}_linux.deb`}
+            aria-label={`Télécharger ToneLab v${CONFIG.APP_VERSION} pour Linux (Debian/Ubuntu 64-bit)`}
+            className="inline-flex items-center justify-center gap-3 px-6 py-2 rounded-lg font-semibold text-sm text-white mb-5"
+            style={primaryButtonStyle}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'scale(1.05)';
+              e.currentTarget.style.boxShadow = '0 2px 10px rgba(29, 113, 149, 0.2)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'scale(1)';
+              e.currentTarget.style.boxShadow = '0 10px 30px rgba(29, 113, 149, 0.4)';
+            }}
+          >
+            <img src="/assets/icons/linux.svg" alt="Linux" className="w-5 h-5 brightness-0 invert" />
+            Télécharger pour Linux
           </a>
 
           {/* Version info */}
           <div className="text-text-secondary text-sm mb-8 leading-relaxed">
             <strong className="text-text-primary">Version {CONFIG.APP_VERSION}</strong> • 133 MB<br />
-            Compatible Windows 10/11 (64-bit)
+            Compatible Windows 10/11 (64-bit) • Linux Debian/Ubuntu (64-bit)
           </div>
 
           {/* PWA button — active link */}
