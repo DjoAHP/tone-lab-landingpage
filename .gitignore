@@ -35,3 +35,6 @@ public/download/*.exe
 *.njsproj
 *.sln
 *.sw?
+
+# Backup de restauration (copie manuelle, non versionnee)
+src.backup-*/

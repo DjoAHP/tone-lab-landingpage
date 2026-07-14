@@ -12,12 +12,7 @@ const features: Feature[] = [
   {
     id: "diapa",
     icon: (
-      <img
-        src="/assets/icons/diapa-tool.svg"
-        alt="Diapa"
-        className="w-7 h-7 brightness-0 invert"
-        loading="lazy"
-      />
+      <img src="/assets/icons/diapa-tool.svg" alt="Diapa" className="w-7 h-7 brightness-0 invert" loading="lazy" />
     ),
     title: "Diapa",
     description: "Diapason avancé sous forme de clavier virtuel.",
@@ -25,12 +20,7 @@ const features: Feature[] = [
   {
     id: "stack",
     icon: (
-      <img
-        src="/assets/icons/stack-tool.svg"
-        alt="Stack"
-        className="w-7 h-7 brightness-0 invert"
-        loading="lazy"
-      />
+      <img src="/assets/icons/stack-tool.svg" alt="Stack" className="w-7 h-7 brightness-0 invert" loading="lazy" />
     ),
     title: "Stack",
     description:
@@ -39,12 +29,7 @@ const features: Feature[] = [
   {
     id: "metro",
     icon: (
-      <img
-        src="/assets/icons/metro-tool.svg"
-        alt="Metro"
-        className="w-7 h-7 brightness-0 invert"
-        loading="lazy"
-      />
+      <img src="/assets/icons/metro-tool.svg" alt="Metro" className="w-7 h-7 brightness-0 invert" loading="lazy" />
     ),
     title: "Metro",
     description:
@@ -54,12 +39,7 @@ const features: Feature[] = [
   {
     id: "setlist",
     icon: (
-      <img
-        src="/assets/icons/setlist-tool.svg"
-        alt="Setlist"
-        className="w-7 h-7 brightness-0 invert"
-        loading="lazy"
-      />
+      <img src="/assets/icons/setlist-tool.svg" alt="Setlist" className="w-7 h-7 brightness-0 invert" loading="lazy" />
     ),
     title: "Setlist",
     description:
@@ -69,12 +49,7 @@ const features: Feature[] = [
   {
     id: "chrono",
     icon: (
-      <img
-        src="/assets/icons/chrono-tool.svg"
-        alt="Chrono"
-        className="w-7 h-7 brightness-0 invert"
-        loading="lazy"
-      />
+      <img src="/assets/icons/chrono-tool.svg" alt="Chrono" className="w-7 h-7 brightness-0 invert" loading="lazy" />
     ),
     title: "Chrono",
     description:
@@ -84,12 +59,7 @@ const features: Feature[] = [
   {
     id: "docv",
     icon: (
-      <img
-        src="/assets/icons/docv-tool.svg"
-        alt="DocV"
-        className="w-7 h-7 brightness-0 invert"
-        loading="lazy"
-      />
+      <img src="/assets/icons/docv-tool.svg" alt="DocV" className="w-7 h-7 brightness-0 invert" loading="lazy" />
     ),
     title: "DocV",
     description:
@@ -98,10 +68,7 @@ const features: Feature[] = [
   },
 ];
 
-const gridStyle: React.CSSProperties = {
-  maxWidth: '1200px',
-  margin: '0 auto',
-};
+const gridStyle: React.CSSProperties = { maxWidth: '1200px', margin: '0 auto' };
 
 const cardStyle: React.CSSProperties = {
   background: 'rgba(26, 29, 39, 0.4)',
@@ -120,40 +87,36 @@ const iconContainerStyle: React.CSSProperties = {
 
 const Features: React.FC = () => {
   return (
-    <section id="features" className="relative overflow-hidden py-20"
-             style={{ backgroundColor: 'var(--bg-secondary)' }}>
+    <section id="features" className="relative overflow-hidden py-20" style={{ backgroundColor: 'var(--bg-secondary)' }}>
       <div className="relative z-10 max-w-[1200px] mx-auto px-4">
         <h2 className="text-4xl font-bold text-text-primary text-center mb-5">
           Fonctionnalités
         </h2>
         <p className="text-lg text-text-secondary text-center max-w-[600px] mx-auto mb-15 leading-relaxed">
-           6 outils intégrés pour couvrir tous vos besoins musicaux
+          6 outils intégrés pour couvrir tous vos besoins musicaux
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" style={gridStyle}>
           {features.map((feature, index) => (
             <div
               key={feature.id}
-              className="group relative p-8 rounded-2xl border"
+              className="feature-card group relative p-8 rounded-2xl border animate-fadeInUp"
               style={{
                 ...cardStyle,
-                transitionDelay: `${index * 80}ms`,
+                animationDelay: `${index * 0.08}s`,
               }}
               onMouseEnter={(e) => {
-                // Tilt 3D
+                if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
                 const rect = e.currentTarget.getBoundingClientRect();
                 const centerX = rect.left + rect.width / 2;
                 const centerY = rect.top + rect.height / 2;
-                const mouseX = e.clientX;
-                const mouseY = e.clientY;
-                const rotateY = ((mouseX - centerX) / rect.width) * 6;
-                const rotateX = ((centerY - mouseY) / rect.height) * 6;
+                const rotateY = ((e.clientX - centerX) / rect.width) * 6;
+                const rotateX = ((centerY - e.clientY) / rect.height) * 6;
 
                 e.currentTarget.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-6px)`;
                 e.currentTarget.style.borderColor = 'rgba(29, 113, 149, 0.5)';
                 e.currentTarget.style.boxShadow = '0 20px 60px rgba(0, 0, 0, 0.4), 0 0 40px rgba(29, 113, 149, 0.12)';
 
-                // Glow sur l'icône
                 const iconEl = e.currentTarget.querySelector(".icon-glow") as HTMLElement | null;
                 if (iconEl) {
                   iconEl.style.boxShadow = '0 0 25px rgba(29, 113, 149, 0.5), 0 0 50px rgba(29, 113, 149, 0.2)';
@@ -191,6 +154,16 @@ const Features: React.FC = () => {
               <p className="text-text-secondary leading-relaxed">
                 {feature.description}
               </p>
+
+              {/* Flèche "en savoir plus" au survol */}
+              <span
+                className="absolute bottom-5 right-5 text-accent-light opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                aria-hidden="true"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </span>
             </div>
           ))}
         </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Download as DownloadIcon } from 'lucide-react';
 import { CONFIG } from '../config';
 
 const sectionStyle: React.CSSProperties = {
@@ -29,9 +30,6 @@ const primaryButtonStyle: React.CSSProperties = {
 const Download: React.FC = () => {
   return (
     <section id="download" className="relative overflow-hidden" style={sectionStyle}>
-      {/* Shader overlay (ready for your custom gradient) */}
-      <div className="absolute inset-0 pointer-events-none" style={{ background: 'transparent' }} />
-
       <div className="relative z-10 max-w-[600px] mx-auto">
         <h2 className="text-4xl font-bold text-text-primary mb-5">
           Télécharger
@@ -40,73 +38,55 @@ const Download: React.FC = () => {
           Obtenez ToneLab dès maintenant et commencez à améliorer votre pratique musicale
         </p>
 
-        {/* Download card */}
-        <div className="rounded-2xl p-[52px]"
-             style={cardStyle}
-             onMouseEnter={(e) => {
-               e.currentTarget.style.transform = 'translateY(-8px)';
-               e.currentTarget.style.boxShadow = '0 30px 80px rgba(0, 0, 0, 0.5), 0 0 100px rgba(29, 113, 149, 0.15)';
-               e.currentTarget.style.borderColor = 'rgba(29, 113, 149, 0.6)';
-             }}
-             onMouseLeave={(e) => {
-               e.currentTarget.style.transform = 'translateY(0)';
-               e.currentTarget.style.boxShadow = '0 20px 60px rgba(0, 0, 0, 0.4), 0 0 80px rgba(29, 113, 149, 0.1)';
-               e.currentTarget.style.borderColor = 'rgba(29, 113, 149, 0.3)';
-             }}
+        <div
+          className="rounded-2xl p-[52px]"
+          style={cardStyle}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = 'translateY(-8px)';
+            e.currentTarget.style.boxShadow = '0 30px 80px rgba(0, 0, 0, 0.5), 0 0 100px rgba(29, 113, 149, 0.15)';
+            e.currentTarget.style.borderColor = 'rgba(29, 113, 149, 0.6)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = 'translateY(0)';
+            e.currentTarget.style.boxShadow = '0 20px 60px rgba(0, 0, 0, 0.4), 0 0 80px rgba(29, 113, 149, 0.1)';
+            e.currentTarget.style.borderColor = 'rgba(29, 113, 149, 0.3)';
+          }}
         >
-          {/* Download icon */}
-          <div className="w-[80px] h-[80px] rounded-2xl flex items-center justify-center mx-auto mb-8"
-               style={iconContainerStyle}>
-            <span className="text-4xl text-white" aria-hidden="true">⬇</span>
+          <div className="w-[80px] h-[80px] rounded-2xl flex items-center justify-center mx-auto mb-8" style={iconContainerStyle}>
+            <DownloadIcon size={32} className="text-white" />
           </div>
 
-          {/* Primary download button — Windows */}
           <a
             href={`${CONFIG.DOWNLOAD_BASE_URL}/download/v${CONFIG.APP_VERSION}/ToneLab-${CONFIG.APP_VERSION}_windows.exe`}
             download={`ToneLab-${CONFIG.APP_VERSION}_windows.exe`}
             aria-label={`Télécharger ToneLab v${CONFIG.APP_VERSION} pour Windows (133 MB, compatible 10/11 64-bit)`}
             className="flex items-center justify-center gap-3 w-full px-6 py-2 rounded-lg font-semibold text-sm text-white mb-3"
             style={primaryButtonStyle}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'scale(1.05)';
-              e.currentTarget.style.boxShadow = '0 2px 10px rgba(29, 113, 149, 0.2)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = 'scale(1)';
-              e.currentTarget.style.boxShadow = '0 10px 30px rgba(29, 113, 149, 0.4)';
-            }}
+            onMouseEnter={(e) => { e.currentTarget.style.transform = 'scale(1.05)'; e.currentTarget.style.boxShadow = '0 2px 10px rgba(29, 113, 149, 0.2)'; }}
+            onMouseLeave={(e) => { e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.boxShadow = '0 10px 30px rgba(29, 113, 149, 0.4)'; }}
           >
             <img src="/assets/icons/windows.svg" alt="Windows" className="w-5 h-5 brightness-0 invert" />
             Télécharger pour Windows
           </a>
 
-          {/* Primary download button — Linux */}
           <a
             href={`${CONFIG.DOWNLOAD_BASE_URL}/download/v${CONFIG.APP_VERSION}/ToneLab-${CONFIG.APP_VERSION}_linux.deb`}
             download={`ToneLab-${CONFIG.APP_VERSION}_linux.deb`}
             aria-label={`Télécharger ToneLab v${CONFIG.APP_VERSION} pour Linux (Debian/Ubuntu 64-bit)`}
             className="flex items-center justify-center gap-3 w-full px-6 py-2 rounded-lg font-semibold text-sm text-white mb-5"
             style={primaryButtonStyle}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'scale(1.05)';
-              e.currentTarget.style.boxShadow = '0 2px 10px rgba(29, 113, 149, 0.2)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = 'scale(1)';
-              e.currentTarget.style.boxShadow = '0 10px 30px rgba(29, 113, 149, 0.4)';
-            }}
+            onMouseEnter={(e) => { e.currentTarget.style.transform = 'scale(1.05)'; e.currentTarget.style.boxShadow = '0 2px 10px rgba(29, 113, 149, 0.2)'; }}
+            onMouseLeave={(e) => { e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.boxShadow = '0 10px 30px rgba(29, 113, 149, 0.4)'; }}
           >
             <img src="/assets/icons/linux.svg" alt="Linux" className="w-5 h-5 brightness-0 invert" />
             Télécharger pour Linux
           </a>
 
-          {/* Version info */}
           <div className="text-text-secondary text-sm mb-8 leading-relaxed">
             <strong className="text-text-primary">Version {CONFIG.APP_VERSION}</strong> • 133 MB<br />
             Compatible Windows 10/11 (64-bit) • Linux Debian/Ubuntu (64-bit)
           </div>
 
-          {/* PWA button — active link */}
           <a
             href={CONFIG.PWA_URL}
             target="_blank"
@@ -120,16 +100,10 @@ const Download: React.FC = () => {
               cursor: 'pointer',
               color: 'white',
             }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'scale(1.05)';
-              e.currentTarget.style.boxShadow = '0 2px 10px rgba(29, 113, 149, 0.2)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = 'scale(1)';
-              e.currentTarget.style.boxShadow = '0 10px 30px rgba(29, 113, 149, 0.4)';
-            }}
+            onMouseEnter={(e) => { e.currentTarget.style.transform = 'scale(1.05)'; e.currentTarget.style.boxShadow = '0 2px 10px rgba(29, 113, 149, 0.2)'; }}
+            onMouseLeave={(e) => { e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.boxShadow = '0 10px 30px rgba(29, 113, 149, 0.4)'; }}
           >
-            🌐 Ouvrir la version PWA
+            Ouvrir la version PWA
           </a>
         </div>
       </div>
