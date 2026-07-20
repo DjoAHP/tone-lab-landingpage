@@ -4,7 +4,7 @@
  */
 
 export const CONFIG = {
-  APP_VERSION: "2.9.13",
+  APP_VERSION: "2.9.14",
   DOWNLOAD_BASE_URL: "https://github.com/DjoAHP/tone-lab-electron/releases",
   PWA_URL: "https://tonelab-pwa.netlify.app/",
   GITHUB_REPO: "https://github.com/DjoAHP/tone-lab-electron",
